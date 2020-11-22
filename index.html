@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=-width, initial-scale=1.0" />
+    <title>Proyecto final</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div id="app" class="bg-light">
+      <!-- navbar -->
+      <div id="my_nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <div class="navbar-brand">
+            <img
+              style="max-width: 40px"
+              src="./assets/img/uaem.jpg"
+              alt="uaem"
+            />
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Inicio <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Enlace</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End navbar -->
+
+      <!-- Content -->
+      <main id="content" class="container py-5">
+        <header class="content__header">
+          <h1 class="text-center text-2xl">Modelos de Segmentación</h1>
+          <h2 class="text-center text-xl">Facultad Geografia</h2>
+
+          <!-- Modal -->
+          <div class="text-center my-4">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-link"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Da clic y lee las instrucciones
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h2 class="text-xl">
+                      1.- Elije el tipo de Modelo que requieres para tu campaña
+                      o prueba.<br />
+                      <pre></pre>
+                      2.- Lee las descripciones de cada Modelo y selecciona el
+                      que mas se ajuste a tus necesidades.<br />
+                      <pre></pre>
+                      3.- Escoje las caracteristicas mas apropiadas.<br />
+                      <pre></pre>
+                      4.- Puedes filtrar los resultados de tu Modelo en
+                      combinación con otras categorias.<br />
+                      <pre></pre>
+                      5.- Selecciona el formato y datos de salida de tu segmento
+                      o recomendación.
+                    </h2>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Cerrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content__body p-4">
+          <!-- Form steps -->
+          <div class="container mb-4">
+            <div class="multisteps-form__progress">
+              <button
+                class="multisteps-form__progress-btn text-sm js-active"
+                type="button"
+              >
+                Modelos
+              </button>
+              <button
+                class="multisteps-form__progress-btn text-sm"
+                type="button"
+              >
+                Sociodemográficos
+              </button>
+              <button
+                class="multisteps-form__progress-btn text-sm"
+                type="button"
+              >
+                Comportamiento del cliente
+              </button>
+              <button
+                class="multisteps-form__progress-btn text-sm"
+                type="button"
+              >
+                Geograficos
+              </button>
+              <button
+                class="multisteps-form__progress-btn text-sm"
+                type="button"
+              >
+                Datos
+              </button>
+              <button
+                class="multisteps-form__progress-btn text-sm"
+                type="button"
+              >
+                Formulario
+              </button>
+            </div>
+          </div>
+          <!-- End steps -->
+
+          <!-- Content steps -->
+          <div class="container py-3">
+            <!--MODELOS--->
+            <div
+              class="mt-3 p-4 rounded shadow bg-white"
+              data-animation="scaleIn"
+            >
+              <div>
+                <h3 class="text-center">
+                  ¿Que tipo de modelo quieres utilizar?
+                </h3>
+                <div class="card my-4">
+                  <div class="card-body">
+                    <div class="container md:text-center">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                          v-model="modelosSegmentacion"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >Segmentar Clientes</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox2"
+                          value="option2"
+                          v-model="modelosRecomendacion"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >Recomendar Productos</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modelos de segmentación -->
+                <div v-show="modelosSegmentacion">
+                  <div class="container">
+                    <h2 class="text-center">Modelos de Segmentación</h2>
+                    <p class="text-center">
+                      Elige el modelo de segmentación de clientes que mas se
+                      ajuste a tus necesidades.
+                    </p>
+                  </div>
+
+                  <div class="accordion" id="accordionExample">
+                    <!-- Accordion card: #1 -->
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <button
+                          class="btn btn-link btn-block text-left"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          <h5 class="text-xl">RFM por Categorias</h5>
+                          <p class="text-sm">
+                            Consiste en clasificar a los clientes mediante tres
+                            variables indicadoras:<br />
+                            Recency (Tiempo transcurrido desde su ultima
+                            compra)<br />
+                            Frecuency (Numero de compras)<br />
+                            Money (Valor de las compras totales del
+                            cliente).Este modelo califica cada variable del 1 al
+                            4, donde 4 es el valor mas alto.
+                          </p>
+                        </button>
+                      </div>
+
+                      <div
+                        id="collapseOne"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionExample"
+                      >
+                        <div class="card-body">
+                          <form>
+                            <p class="text-center mb-4">
+                              Elije las variables del modelo RFM por Categorias
+                              mas adecuadas a tu campaña.
+                            </p>
+                            <div class="form-row mb-4">
+                              <div class="form-group col-12 col-lg-4 mb-4">
+                                <h5>Area</h5>
+
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    Muebles
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    Ropa
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="form-group col-12 col-lg-4 mb-4">
+                                <h5>Categorias de productos</h5>
+                                <select id="inputState" class="form-control">
+                                  <option>Zapato infantil</option>
+                                  <option>Zapato dama</option>
+                                  <option>Zapato caballero</option>
+                                  <option>Transporte y movilidad</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-12 col-lg-4 mb-4">
+                                <h5>Tipo de compra</h5>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    Crédito
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    Contado
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="form-group col-12 col-lg-4">
+                                <h5>R=Recency</h5>
+                                <p>
+                                  Tiempo transcurrido desde su ultima compra
+                                </p>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    4
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    3
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    2
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    1
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="form-group col-12 col-lg-4">
+                                <h5>F=Frecuency</h5>
+                                <p>Numero de compras</p>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    4
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    3
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    2
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    1
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="form-group col-12 col-lg-4">
+                                <h5>M=Money</h5>
+                                <p>Valor de las compras totales del cliente</p>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    4
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    3
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    2
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    1
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion card: #2 -->
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          <h5 class="text-xl">SPC "Probabilidad de compra"</h5>
+                          <p class="text-sm">
+                            Este modelo clasifica a los clientes acuerdo al
+                            número de compras y tiempo transcurrido entre
+                            compras por medios digitales y los divide<br />
+                            por estrategia de comunicación y probabilidad de
+                            compra.
+                          </p>
+                        </button>
+                      </div>
+                      <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionExample"
+                      >
+                        <div class="card-body">
+                          <form>
+                            <p class="text-center">
+                              Elije las variables del modelo SPC "Probabilidad
+                              de compra" mas adecuadas a tu campaña.
+                            </p>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <h5>Retencion del cliente</h5>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    Alta probabilidad de compra
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    Baja probabilidad de compra
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="form-group col-md-6">
+                                <h5>Recuperacion del cliente</h5>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck1"
+                                  >
+                                    Alta probabilidad de compra
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="defaultCheck2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="defaultCheck2"
+                                  >
+                                    Baja probabilidad de compra
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion card: #3 -->
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <button
+                          class="btn btn-link btn-block text-left collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          <h5 class="text-xl">Puntualidad "N"</h5>
+                          <p class="text-sm">
+                            Utiliza diversas variables económicas, demográficas
+                            y de perfil digital que permite predecir la
+                            puntualidad de abono<br />
+                            para Clientes clasificación "N" antes de que sus
+                            meses de maduración permitan clasificarlos en algun
+                            tipo de puntualidad.
+                          </p>
+                        </button>
+                      </div>
+                      <div
+                        id="collapseThree"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionExample"
+                      >
+                        <div class="card-body">
+                          <p class="text-center">
+                            Elije las variables del modelo Puntualidad "N" mas
+                            adecuadas a tu campaña.
+                          </p>
+                          <h5>Predicción de Puntualidad</h5>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox1"
+                              value="option1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox1"
+                              >Cliente A</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox2"
+                              >Cliente B</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Cliente C</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox2"
+                              value="option2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox2"
+                              >Cliente D</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineCheckbox3"
+                              >Cliente Z</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End modelos de segmentación -->
+
+                <!-- Modelos de recomendación -->
+                <div v-show="modelosRecomendacion">
+                  <div class="container mt-4">
+                    <h2 class="text-center">Modelos de Recomendación</h2>
+                    <p class="text-center">
+                      Elige el modelo de recomendación de productos que mas se
+                      ajuste a tus necesidades.
+                    </p>
+                  </div>
+
+                  <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="heading1">
+                        <h2 class="mb-0">
+                          <button
+                            class="btn btn-link btn-block text-left"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#modelosRecomendacion_1"
+                            aria-expanded="true"
+                            aria-controls="modelosRecomendacion_1"
+                          >
+                            ejemplo #1
+                          </button>
+                        </h2>
+                      </div>
+
+                      <div
+                        id="modelosRecomendacion_1"
+                        class="collapse show"
+                        aria-labelledby="heading1"
+                        data-parent="#modelosRecomendacion_1"
+                      >
+                        <div class="card-body"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end pt-3">
+                    <button class="btn btn-primary" type="button" title="Next">
+                      Continuar
+                    </button>
+                  </div>
+                </div>
+                <!-- End modelos de recomendación -->
+              </div>
+            </div>
+          </div>
+          <!-- End content steps -->
+        </div>
+      </main>
+      <!-- End Content -->
+
+      <!-- Footer -->
+      <footer id="my_footer" class="flex flex-col justify-around">
+        <div class="img flex justify-center">
+          <img
+            class=""
+            src="./assets/img/uaem.jpg"
+            width="80"
+            alt=""
+            srcset=""
+          />
+        </div>
+
+        <p class="m-0 flex justify-content-center items-center font-bold">
+          © 2020 | Proyecto Final UAEM
+        </p>
+      </footer>
+      <!-- End Footer -->
+    </div>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Vue -->
+    <!-- version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <!-- Custom js -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
