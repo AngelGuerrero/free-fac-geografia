@@ -2487,6 +2487,7 @@
                               <v-date-picker
                                 color="red"
                                 v-model="fechaUltimaActividadR"
+                                is-range
                               />
                             </div>
                           </div>
@@ -2502,6 +2503,7 @@
                               <v-date-picker
                                 color="green"
                                 v-model="fechaUltimaActividadM"
+                                is-range
                               />
                             </div>
                           </div>
@@ -2517,6 +2519,7 @@
                               <v-date-picker
                                 color="orange"
                                 v-model="fechaUltimaActividadT"
+                                is-range
                               />
                             </div>
                           </div>
@@ -2644,19 +2647,10 @@
                                   <div class="flex justify-center">
                                     <v-date-picker
                                       v-model="fechaUltimoMovimientoA"
-                                      mode="dateTime"
+                                      mode="date"
                                       color="indigo"
-                                      is24hr
+                                      is-range
                                     >
-                                      <template
-                                        v-slot="{ inputValue, inputEvents }"
-                                      >
-                                        <input
-                                          class="px-2 py-1 border rounded focus:outline-none focus:border-blue-300"
-                                          :value="inputValue"
-                                          v-on="inputEvents"
-                                        />
-                                      </template>
                                     </v-date-picker>
                                   </div>
                                 </div>
