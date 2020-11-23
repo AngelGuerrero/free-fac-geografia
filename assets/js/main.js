@@ -25,7 +25,7 @@ const vm = new Vue({
     // Es la vista que está viendo el usuario
     // Corresponde a el número de paso actual.
     // 
-    pasoSeleccionado: 4,
+    pasoSeleccionado: 5,
 
     // 
     // SECCIÓN CATEGORÍA COMPORTAMIENTO CLIENTE
