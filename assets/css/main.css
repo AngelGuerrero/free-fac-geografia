@@ -360,3 +360,9 @@ div[slider] > input[type="range"]::-ms-tooltip {
 [slider]:hover > div > [sign] {
   opacity: 1;
 }
+
+/* Google maps */
+.map-container-google-1 {
+}
+.map-container iframe {
+}

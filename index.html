@@ -2909,14 +2909,14 @@ children[13].childNodes[1].innerHTML=this.value;"
                               <div class="card">
                                 <div class="card-body">
                                   <h5>Fecha del ultimo movimiento de A</h5>
-                                  <p class="card-text">
+                                  <div class="card-text">
                                     <input
                                       type="text"
                                       id="calendario"
                                       name=""
                                       readonly=""
                                     />
-                                  </p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2929,6 +2929,506 @@ children[13].childNodes[1].innerHTML=this.value;"
               </div>
             </section>
             <!-- END COMPORTAMIENTO DEL CLIENTE -->
+
+            <!-- SECCIÓN GEOGRÁFICOS -->
+            <section
+              v-show="pasoSeleccionado === 3"
+              class="mt-3"
+              data-animation="scaleIn"
+            >
+              <article>
+                <h3 class="text-center">Categoria Geograficos</h3>
+                <p>
+                  La categorias geograficas te permiten filtrar varias opciones
+                  de ubicacion del cliente. Ahora bien, si no lo requieres, pues
+                  dar clic en continuar.
+                </p>
+                <div class="form-row my-4">
+                  <div class="col-12 col-sm-6">
+                    <select class="multisteps-form__select form-control">
+                      <option selected="selected">Estado</option>
+                      <option>AGUASCALIENTES</option>
+                      <option>BAJA CALIFORNIA</option>
+                      <option>BAJA CALIFORNIA SUR</option>
+                      <option>CAMPECHE</option>
+                      <option>COAHUILA DE ZARAGOZA</option>
+                      <option>COLIMA</option>
+                      <option>CHIAPAS</option>
+                      <option>CHIHUAHUA</option>
+                      <option>CIUDAD DE MEXICO</option>
+                      <option>DURANGO</option>
+                      <option>GUANAJUATO</option>
+                      <option>GUERRERO</option>
+                      <option>HIDALGO</option>
+                      <option>JALISCO</option>
+                      <option>MEXICO</option>
+                      <option>MICHOACAN DE OCAMPO</option>
+                      <option>MORELOS</option>
+                      <option>NAYARIT</option>
+                      <option>NUEVO LEON</option>
+                      <option>OAXACA</option>
+                      <option>PUEBLA</option>
+                      <option>QUERETARO</option>
+                      <option>QUINTANA ROO</option>
+                      <option>SAN LUIS POTOSI</option>
+                      <option>SINALOA</option>
+                      <option>SONORA</option>
+                      <option>TABASCO</option>
+                      <option>TAMAULIPAS</option>
+                      <option>TLAXCALA</option>
+                      <option>VERACRUZ DE IGNACIO DE LA LLAVE</option>
+                      <option>YUCATAN</option>
+                      <option>ZACATECAS</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                    <select class="multisteps-form__select form-control">
+                      <option selected="selected">Municipio</option>
+                      <option>ACAMBAY</option>
+                      <option>ACOLMAN</option>
+                      <option>ACULCO</option>
+                      <option>ALMOLOYA DE ALQUISIRAS</option>
+                      <option>ALMOLOYA DE JUAREZ</option>
+                      <option>ALMOLOYA DEL RIO</option>
+                      <option>AMANALCO</option>
+                      <option>AMATEPEC</option>
+                      <option>AMECAMECA</option>
+                      <option>APAXCO</option>
+                      <option>ATENCO</option>
+                      <option>ATIZAPAN</option>
+                      <option>ATIZAPAN DE ZARAGOZA</option>
+                      <option>ATLAUTLA</option>
+                      <option>AXAPUSCO</option>
+                      <option>AYAPANGO</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="card-text">
+                              <h5>Tipo de ciudad</h5>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  Zonas Metropolitanas
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Conurbacion
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  Centros Urbanos
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  n/a
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="card-text">
+                              <h5>Clusters de Ciudades</h5>
+                              <p>
+                                Se calculó 104 cluster territoriales que
+                                comparten caracteristicas fisicas, demograficas,
+                                economicas, consumo y vias de comunicación
+                                similares entre espacios urbanos y son nombradas
+                                a razon de la ciudad principal.
+                              </p>
+                              <select
+                                class="multisteps-form__select form-control"
+                              >
+                                <option selected="selected">Clusters</option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-4 mb-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5>Division C</h5>
+                            <div class="card-text">
+                              <p>
+                                Grandes extensiones territoriales en las que se
+                                divide el territorio nacional
+                              </p>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  División I
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División II
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  División III
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División IV
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División V
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-3">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5>Regiones Nielsen / AMVO</h5>
+                            <div class="card-text">
+                              <p>
+                                Grandes extensiones territoriales en las que se
+                                divide el territorio nacional
+                              </p>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  División I
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División II
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  División III
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División IV
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  División V
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5>Regiones AIM</h5>
+                            <div class="card-text">
+                              <p>
+                                Grandes extensiones territoriales en las que se
+                                divide el territorio nacional para analisis de
+                                mercado segun la Asocion de Internet de Mexico.
+                              </p>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  Centro Norte
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Centro Sur
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck1"
+                                >
+                                  Este
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  No identificado
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Noreste
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Noroeste
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Oeste
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Sureste
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  value=""
+                                  id="defaultCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="defaultCheck2"
+                                >
+                                  Suroeste
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Google map-->
+                <div class="min-vh-50">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      class="embed-responsive-item"
+                      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5287197.88756685!2d-101.89025342665099!3d23.78338017554413!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1603843493857!5m2!1ses!2smx"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+                <!--Google Maps-->
+              </article>
+            </section>
+            <!-- END SECCIÓN GEOGRÁFICOS -->
 
             <!-- Botones para seleccionar paso -->
             <section class="flex justify-between pt-3">
@@ -2949,7 +3449,7 @@ children[13].childNodes[1].innerHTML=this.value;"
               </button>
             </section>
           </div>
-          <!-- End content steps -->
+          <!-- END content steps -->
         </div>
       </main>
       <!-- End Content -->
