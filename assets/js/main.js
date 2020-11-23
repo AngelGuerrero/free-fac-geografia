@@ -33,15 +33,15 @@ const vm = new Vue({
     // Representan los datos enlazados a los calendarios
     // de la sección de comportamiento cliente
     // 
-    fechaUltimaActividadR: null,
-    fechaUltimaActividadM: null,
-    fechaUltimaActividadT: null,
-    fechaUltimoMovimientoA: null,
+    fechaUltimaActividadR: new Date(),
+    fechaUltimaActividadM: new Date(),
+    fechaUltimaActividadT: new Date(),
+    fechaUltimoMovimientoA: new Date(),
 
     // 
     // SECCIÓN DE FORMULARIO
     // 
-    fechaInicioCampanaOProyecto: null
+    fechaInicioCampanaOProyecto: new Date()
   },
 
   computed: {

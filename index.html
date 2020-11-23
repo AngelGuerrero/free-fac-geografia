@@ -2484,7 +2484,10 @@
                               Fecha de ultima actividad e R
                             </h4>
                             <div class="flex justify-center">
-                              <v-date-picker v-model="fechaUltimaActividadR" />
+                              <v-date-picker
+                                color="red"
+                                v-model="fechaUltimaActividadR"
+                              />
                             </div>
                           </div>
                         </div>
@@ -2496,7 +2499,10 @@
                               Fecha de ultima actividad e M
                             </h4>
                             <div class="flex justify-center">
-                              <v-date-picker v-model="fechaUltimaActividadM" />
+                              <v-date-picker
+                                color="green"
+                                v-model="fechaUltimaActividadM"
+                              />
                             </div>
                           </div>
                         </div>
@@ -2508,7 +2514,10 @@
                               Fecha de ultima actividad e T
                             </h4>
                             <div class="flex justify-center">
-                              <v-date-picker v-model="fechaUltimaActividadT" />
+                              <v-date-picker
+                                color="orange"
+                                v-model="fechaUltimaActividadT"
+                              />
                             </div>
                           </div>
                         </div>
@@ -2635,7 +2644,20 @@
                                   <div class="flex justify-center">
                                     <v-date-picker
                                       v-model="fechaUltimoMovimientoA"
-                                    />
+                                      mode="dateTime"
+                                      color="indigo"
+                                      is24hr
+                                    >
+                                      <template
+                                        v-slot="{ inputValue, inputEvents }"
+                                      >
+                                        <input
+                                          class="px-2 py-1 border rounded focus:outline-none focus:border-blue-300"
+                                          :value="inputValue"
+                                          v-on="inputEvents"
+                                        />
+                                      </template>
+                                    </v-date-picker>
                                   </div>
                                 </div>
                               </div>
@@ -3413,10 +3435,22 @@
                           >¿Cual es la fecha de inicio de tu campaña o
                           proyecto?</label
                         >
-                        <div class="col-12 col-md-8 flex justify-center">
+                        <div class="col-12 col-md-8 flex justify-center items-center">
                           <v-date-picker
+                            class="border border-8 rounded w-full flex justify-center"
                             v-model="fechaInicioCampanaOProyecto"
-                          />
+                            mode="date"
+                            color="indigo"
+                            is24hr
+                          >
+                            <template v-slot="{ inputValue, inputEvents }">
+                              <input
+                                class="text-center px-2 py-1 focus:outline-none focus:border-blue-300"
+                                :value="inputValue"
+                                v-on="inputEvents"
+                              />
+                            </template>
+                          </v-date-picker>
                         </div>
                       </div>
 
