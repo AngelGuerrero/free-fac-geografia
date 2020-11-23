@@ -2,7 +2,10 @@ const vm = new Vue({
   el: '#app',
 
   data: {
-    modelosSegmentacion: false,
-    modelosRecomendacion: false
+    // 
+    // Selecciona la primera vista a elegir, en base al radio button.
+    // 
+    // Si es el modelo segmentado o el modelo recomendado.
+    modeloSeleccionado: ''
   }
 })
