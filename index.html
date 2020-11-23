@@ -16,6 +16,13 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <!-- Range slider -->
+    <link
+      rel="stylesheet"
+      href="http://bootstraptema.ru/plugins/2018/irs/ion.rangeSlider.skin.css"
+    />
+    <link rel="stylesheet" href="./assets/css/rangeSlider.css" />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
@@ -725,18 +732,16 @@
                   <div class="accordion" id="accordionExample">
                     <div class="card">
                       <div class="card-header" id="heading1">
-                        <h2 class="mb-0">
-                          <button
-                            class="btn btn-link btn-block text-left"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#modelosRecomendacion_1"
-                            aria-expanded="true"
-                            aria-controls="modelosRecomendacion_1"
-                          >
-                            ejemplo #1
-                          </button>
-                        </h2>
+                        <button
+                          class="btn btn-link btn-block text-left"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#modelosRecomendacion_1"
+                          aria-expanded="true"
+                          aria-controls="modelosRecomendacion_1"
+                        >
+                          ejemplo #1
+                        </button>
                       </div>
 
                       <div
@@ -800,7 +805,6 @@
                     </div>
                   </div>
                 </div>
-                <br />
 
                 <h3 class="text-center">Edad</h3>
                 <p class="text-center">
@@ -832,183 +836,62 @@
                     >
                       <div class="card-body">
                         <div class="row">
-                          <div class="col"></div>
-                          <div class="col-6">
+                          <div class="col-12">
                             <p class="text-center">
                               Elije los minimos y maximos de tu rango de edades
                             </p>
-                            <div slider id="slider-distance">
-                              <div>
-                                <div inverse-left style="width: 70%"></div>
-                                <div inverse-right style="width: 70%"></div>
-                                <div range style="left: 30%; right: 40%"></div>
-                                <span thumb style="left: 30%"></span>
-                                <span thumb style="left: 60%"></span>
-                                <div sign style="left: 30%">
-                                  <span id="value">30</span>
-                                </div>
-                                <div sign style="left: 60%">
-                                  <span id="value">60</span>
-                                </div>
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input
+                                  type="text"
+                                  name="rangeEdad_1"
+                                  id="rangeEdad_1"
+                                />
                               </div>
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="30"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[1].style.width=value+'%';
-children[5].style.left=value+'%';
-children[7].style.left=value+'%';children[11].style.left=value+'%';
-children[11].childNodes[1].innerHTML=this.value;"
-                              />
-
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="60"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[3].style.width=(100-value)+'%';
-children[5].style.right=(100-value)+'%';
-children[9].style.left=value+'%';children[13].style.left=value+'%';
-children[13].childNodes[1].innerHTML=this.value;"
-                              />
                             </div>
-                            <br />
+
                             <p class="text-center">¿Necesitas un rango más?</p>
-                            <div slider id="slider-distance">
-                              <div>
-                                <div inverse-left style="width: 70%"></div>
-                                <div inverse-right style="width: 70%"></div>
-                                <div range style="left: 30%; right: 40%"></div>
-                                <span thumb style="left: 30%"></span>
-                                <span thumb style="left: 60%"></span>
-                                <div sign style="left: 30%">
-                                  <span id="value">30</span>
-                                </div>
-                                <div sign style="left: 60%">
-                                  <span id="value">60</span>
-                                </div>
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input
+                                  type="text"
+                                  name="rangeEdad_2"
+                                  id="rangeEdad_2"
+                                />
                               </div>
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="30"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[1].style.width=value+'%';
-children[5].style.left=value+'%';
-children[7].style.left=value+'%';children[11].style.left=value+'%';
-children[11].childNodes[1].innerHTML=this.value;"
-                              />
-
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="60"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[3].style.width=(100-value)+'%';
-children[5].style.right=(100-value)+'%';
-children[9].style.left=value+'%';children[13].style.left=value+'%';
-children[13].childNodes[1].innerHTML=this.value;"
-                              />
                             </div>
-                            <p class="text-center">¿Otro?</p>
-                            <div slider id="slider-distance">
-                              <div>
-                                <div inverse-left style="width: 70%"></div>
-                                <div inverse-right style="width: 70%"></div>
-                                <div range style="left: 30%; right: 40%"></div>
-                                <span thumb style="left: 30%"></span>
-                                <span thumb style="left: 60%"></span>
-                                <div sign style="left: 30%">
-                                  <span id="value">30</span>
-                                </div>
-                                <div sign style="left: 60%">
-                                  <span id="value">60</span>
-                                </div>
-                              </div>
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="30"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[1].style.width=value+'%';
-children[5].style.left=value+'%';
-children[7].style.left=value+'%';children[11].style.left=value+'%';
-children[11].childNodes[1].innerHTML=this.value;"
-                              />
 
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="60"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[3].style.width=(100-value)+'%';
-children[5].style.right=(100-value)+'%';
-children[9].style.left=value+'%';children[13].style.left=value+'%';
-children[13].childNodes[1].innerHTML=this.value;"
-                              />
+                            <p class="text-center">¿Otro?</p>
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input
+                                  type="text"
+                                  name="rangeEdad_3"
+                                  id="rangeEdad_3"
+                                />
+                              </div>
                             </div>
                           </div>
-                          <div class="col"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header" id="headingTwoo">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseTwoo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwoo"
-                        >
-                          <h5>Rangos de edad</h5>
-                        </button>
-                      </h2>
+                    <div class="card-header">
+                      <button
+                        class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwoo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwoo"
+                      >
+                        <h5>Rangos de edad</h5>
+                      </button>
                     </div>
                     <div
                       id="collapseTwoo"
                       class="collapse"
-                      aria-labelledby="headingTwoo"
                       data-parent="#accordionExample"
                     >
                       <div class="card-body">
@@ -1022,11 +905,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_1"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_1"
                               >
                                 15 a 19 años
                               </label>
@@ -1036,11 +919,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_2"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_2"
                               >
                                 20 a 24 años
                               </label>
@@ -1050,11 +933,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_3"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_3"
                               >
                                 25 a 29 años
                               </label>
@@ -1064,11 +947,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_4"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_4"
                               >
                                 30 a 34 años
                               </label>
@@ -1080,11 +963,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_5"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_5"
                               >
                                 35 a 39 años
                               </label>
@@ -1094,11 +977,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_6"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_6"
                               >
                                 40 a 44 años
                               </label>
@@ -1108,11 +991,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_7"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_7"
                               >
                                 45 a 49 años
                               </label>
@@ -1122,11 +1005,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_8"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_8"
                               >
                                 50 a 54 años
                               </label>
@@ -1138,11 +1021,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_9"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_9"
                               >
                                 55 a 59 años
                               </label>
@@ -1152,11 +1035,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_10"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_10"
                               >
                                 60 a 64 años
                               </label>
@@ -1166,11 +1049,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_11"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_11"
                               >
                                 65 a 69 años
                               </label>
@@ -1180,11 +1063,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_12"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_12"
                               >
                                 70 a 74 años
                               </label>
@@ -1196,11 +1079,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_13"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_13"
                               >
                                 75 a 79 años
                               </label>
@@ -1210,11 +1093,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkRangoEdad_14"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkRangoEdad_14"
                               >
                                 80 a 84 años
                               </label>
@@ -1224,11 +1107,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkRangoEdad_15"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkRangoEdad_15"
                               >
                                 85 años o más
                               </label>
@@ -1271,11 +1154,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkEtapaIteres_1"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkEtapaIteres_1"
                               >
                                 Adolecentes
                               </label>
@@ -1288,11 +1171,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkEtapaIteres_2"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkEtapaIteres_2"
                               >
                                 Adultos jovenes
                               </label>
@@ -1305,11 +1188,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkEtapaInteres_3"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkEtapaInteres_3"
                               >
                                 Adultos
                               </label>
@@ -1322,11 +1205,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkEtapaInteres_4"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkEtapaInteres_4"
                               >
                                 Jubilados
                               </label>
@@ -1370,11 +1253,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkGeneracion_1"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkGeneracion_1"
                               >
                                 Generación Z
                               </label>
@@ -1388,11 +1271,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkGeneracion_2"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkGeneracion_2"
                               >
                                 Millennials (Y)
                               </label>
@@ -1403,11 +1286,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkGeneracion_3"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkGeneracion_3"
                               >
                                 Generación X
                               </label>
@@ -1420,11 +1303,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkGeneracion_4"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkGeneracion_4"
                               >
                                 Baby Boom
                               </label>
@@ -1435,11 +1318,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkGeneracion_5"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkGeneracion_5"
                               >
                                 Generación Silenciosa
                               </label>
@@ -1465,11 +1348,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEscolaridad_1"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEscolaridad_1"
                                 >
                                   Sin estudios
                                 </label>
@@ -1479,11 +1362,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEscolaridad_2"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEscolaridad_2"
                                 >
                                   Primaria
                                 </label>
@@ -1493,11 +1376,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEscolaridad_3"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEscolaridad_3"
                                 >
                                   Secundaria
                                 </label>
@@ -1507,11 +1390,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEscolaridad_4"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEscolaridad_4"
                                 >
                                   Carrera Técnica
                                 </label>
@@ -1521,11 +1404,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEscolaridad_5"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEscolaridad_5"
                                 >
                                   Preparatoria
                                 </label>
@@ -1535,11 +1418,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEscolaridad_6"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEscolaridad_6"
                                 >
                                   Profesional
                                 </label>
@@ -1549,11 +1432,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEscolaridad_7"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEscolaridad_7"
                                 >
                                   No identificado
                                 </label>
@@ -1572,11 +1455,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEstadoCivil_1"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEstadoCivil_1"
                                 >
                                   Casado
                                 </label>
@@ -1586,11 +1469,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEstadoCivil_2"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEstadoCivil_2"
                                 >
                                   Soltero
                                 </label>
@@ -1600,11 +1483,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEstadoCivil_3"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEstadoCivil_3"
                                 >
                                   Union Libre
                                 </label>
@@ -1614,11 +1497,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEstadoCivil_4"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEstadoCivil_4"
                                 >
                                   Divorciado
                                 </label>
@@ -1628,11 +1511,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkEstadoCivil_5"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkEstadoCivil_5"
                                 >
                                   Viudo
                                 </label>
@@ -1642,11 +1525,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEstadoCivil_6"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEstadoCivil_6"
                                 >
                                   Profesional
                                 </label>
@@ -1656,13 +1539,13 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkEstadoCivil_7"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkEstadoCivil_7"
                                 >
-                                  Sin Identificar
+                                  Sin Identifica
                                 </label>
                               </div>
                             </div>
@@ -1684,11 +1567,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogar_1"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogar_1"
                                 >
                                   1 persona
                                 </label>
@@ -1698,11 +1581,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogar_2"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogar_2"
                                 >
                                   2 personas
                                 </label>
@@ -1712,11 +1595,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogar_3"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogar_3"
                                 >
                                   3 personas
                                 </label>
@@ -1726,11 +1609,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogar_4"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogar_4"
                                 >
                                   4 personas
                                 </label>
@@ -1740,11 +1623,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogar_5"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogar_5"
                                 >
                                   5 personas
                                 </label>
@@ -1754,11 +1637,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogar_6"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogar_6"
                                 >
                                   6 o más personas
                                 </label>
@@ -1768,11 +1651,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogar_7"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogar_7"
                                 >
                                   Sin dato
                                 </label>
@@ -1793,11 +1676,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogarTrabajan_1"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogarTrabajan_1"
                                 >
                                   1 persona
                                 </label>
@@ -1807,11 +1690,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogarTrabajan_2"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogarTrabajan_2"
                                 >
                                   2 personas
                                 </label>
@@ -1821,11 +1704,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogarTrabajan_3"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogarTrabajan_3"
                                 >
                                   3 personas
                                 </label>
@@ -1835,11 +1718,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogarTrabajan_4"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogarTrabajan_4"
                                 >
                                   4 personas
                                 </label>
@@ -1849,11 +1732,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="chkIntegrantesHogarTrabajan_5"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck1"
+                                  for="chkIntegrantesHogarTrabajan_5"
                                 >
                                   5 o más personas
                                 </label>
@@ -1863,11 +1746,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="chkIntegrantesHogarTrabajan_6"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="defaultCheck2"
+                                  for="chkIntegrantesHogarTrabajan_6"
                                 >
                                   Sin dato
                                 </label>
@@ -1885,41 +1768,43 @@ children[13].childNodes[1].innerHTML=this.value;"
 
                 <h3 class="text-center">Salario</h3>
                 <p class="text-center">
-                  Elije el ingreso del cliente que mejor consideres.
+                  Elije el ingreso del cliente que mejor considere.
                 </p>
-                <div class="accordion" id="accordionExample">
+                <div class="accordion">
                   <div class="card">
-                    <div class="card-header" id="headingOne">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                          Salarios minimos
+                    <div class="card-header">
+                      <button
+                        class="btn btn-link btn-block text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseSalarioMinimo"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Salarios minimos
 
-                          <p>
-                            Salario mínimo general vigente a partir del 1° de
-                            enero de 2020 corresponde a $123.22 pesos
-                          </p>
-                        </button>
-                      </h2>
+                        <p>
+                          Salario mínimo general vigente a partir del 1° de
+                          enero de 2020 corresponde a $123.22 pesos
+                        </p>
+                      </button>
                     </div>
 
                     <div
-                      id="collapseOne"
+                      id="collapseSalarioMinimo"
                       class="collapse show"
-                      aria-labelledby="headingOne"
+                      aria-labelledby="headingOn"
                       data-parent="#accordionExample"
                     >
                       <div class="card-body">
                         <p class="text-center">
                           Selecciona los rangos de salario minimo requerido
                         </p>
-                        <br />
+
+                        <p>
+                          <br />
+                        </p>
+
                         <div class="row">
                           <div class="col-sm-4">
                             <div class="form-check">
@@ -1927,11 +1812,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkSalario_1"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkSalario_1"
                               >
                                 Menor o igual a 1 SM
                               </label>
@@ -1941,11 +1826,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkSalario_2"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkSalario_2"
                               >
                                 Hasta 2 SM
                               </label>
@@ -1955,11 +1840,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkSalario_3"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkSalario_3"
                               >
                                 Hasta 3 SM
                               </label>
@@ -1971,11 +1856,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkSalario_4"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkSalario_4"
                               >
                                 Hasta 4 SM
                               </label>
@@ -1985,11 +1870,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkSalario_5"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkSalario_5"
                               >
                                 De 5 a 10 SM
                               </label>
@@ -2001,11 +1886,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkSalario_6"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkSalario_6"
                               >
                                 De 11 a 25 SM
                               </label>
@@ -2015,11 +1900,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkSalario_7"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkSalario_7"
                               >
                                 Mayor a 25 SM
                               </label>
@@ -2030,110 +1915,66 @@ children[13].childNodes[1].innerHTML=this.value;"
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header" id="headingTwo">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo"
-                        >
-                          Ingreso promedio mensual
-                          <p>
-                            Elije los minimos y maximos del ingreso promedio
-                            mensual
-                          </p>
-                        </button>
-                      </h2>
+                    <div class="card-header">
+                      <button
+                        class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseIngresoPromedioMensual"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Ingreso promedio mensual
+                        <p>
+                          Elije los minimos y maximos del ingreso promedio
+                          mensual
+                        </p>
+                      </button>
                     </div>
                     <div
-                      id="collapseTwo"
-                      class="collapse"
+                      id="collapseIngresoPromedioMensual"
+                      class="collapse show"
                       aria-labelledby="headingTwo"
                       data-parent="#accordionExample"
                     >
                       <div class="card-body">
                         <div class="row">
-                          <div class="col"></div>
-                          <div class="col-6">
+                          <div class="col-12">
                             <p class="text-center">Salario promedio mensual</p>
-                            <div slider id="slider-distance">
-                              <div>
-                                <div inverse-left style="width: 70%"></div>
-                                <div inverse-right style="width: 70%"></div>
-                                <div range style="left: 30%; right: 40%"></div>
-                                <span thumb style="left: 30%"></span>
-                                <span thumb style="left: 60%"></span>
-                                <div sign style="left: 30%">
-                                  <span id="value">30</span>
-                                </div>
-                                <div sign style="left: 60%">
-                                  <span id="value">60</span>
-                                </div>
-                              </div>
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="30"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[1].style.width=value+'%';
-children[5].style.left=value+'%';
-children[7].style.left=value+'%';children[11].style.left=value+'%';
-children[11].childNodes[1].innerHTML=this.value;"
-                              />
 
-                              <input
-                                type="range"
-                                tabindex="0"
-                                value="60"
-                                max="100"
-                                min="0"
-                                step="1"
-                                oninput="
-this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-var children = this.parentNode.childNodes[1].childNodes;
-children[3].style.width=(100-value)+'%';
-children[5].style.right=(100-value)+'%';
-children[9].style.left=value+'%';children[13].style.left=value+'%';
-children[13].childNodes[1].innerHTML=this.value;"
-                              />
+                            <div class="form-group row">
+                              <div class="col-12">
+                                <input
+                                  type="text"
+                                  name="rangeSalarioPromedioMensual"
+                                  id="rangeSalarioPromedioMensual"
+                                />
+                              </div>
                             </div>
                           </div>
-                          <div class="col"></div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <div class="card-header" id="headingThree">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseThree"
-                          aria-expanded="false"
-                          aria-controls="collapseThree"
-                        >
-                          Nivel socioeconómico
-                          <p>
-                            Selecciona el Nivel Socieconomico de tu interes.
-                            *Datos calculados al 2020
-                          </p>
-                        </button>
-                      </h2>
+                    <div class="card-header">
+                      <button
+                        class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseNivelSocioEconomico"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Nivel socioeconómico
+                        <p>
+                          Selecciona el Nivel Socieconomico de tu interes.
+                          *Datos calculados al 2020
+                        </p>
+                      </button>
                     </div>
                     <div
-                      id="collapseThree"
+                      id="collapseNivelSocioEconomico"
                       class="collapse"
                       aria-labelledby="headingThree"
                       data-parent="#accordionExample"
@@ -2151,11 +1992,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkNivelSocioEconomico_1"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkNivelSocioEconomico_1"
                                 title="Ingreso promedio mensual $94,864"
                               >
                                 A/B
@@ -2167,11 +2008,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkNivelSocioEconomico_2"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkNivelSocioEconomico_2"
                                 title="Ingreso promedio mensual $39,061"
                               >
                                 C+
@@ -2183,11 +2024,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkNivelSocioEconomico_3"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkNivelSocioEconomico_3"
                                 title="Ingreso promedio mensual $22,205"
                               >
                                 C
@@ -2201,11 +2042,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkNivelSocioEconomico_4"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkNivelSocioEconomico_4"
                                 title="Ingreso promedio mensual $16,740"
                               >
                                 C-
@@ -2217,11 +2058,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="chkNivelSocioEconomico_5"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck1"
+                                for="chkNivelSocioEconomico_5"
                                 title="Ingreso promedio mensual $12,945"
                               >
                                 D+
@@ -2235,11 +2076,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkNivelSocioEconomico_6"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkNivelSocioEconomico_6"
                                 title="Ingreso promedio mensual $7,833"
                               >
                                 D
@@ -2251,11 +2092,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="chkNivelSocioEconomico_7"
                               />
                               <label
                                 class="form-check-label"
-                                for="defaultCheck2"
+                                for="chkNivelSocioEconomico_7"
                                 title="Ingreso promedio mensual $3,712"
                               >
                                 E
@@ -2278,15 +2119,17 @@ children[13].childNodes[1].innerHTML=this.value;"
               class="mt-3"
               data-animation="scaleIn"
             >
-              <div>
+              <article>
                 <h3 class="text-center">
                   Categoria Comportamiento del cliente
                 </h3>
+
                 <p class="text-center">
                   En Comportamiento del cliente puedes filtrar las
                   caracteristacas del comportamiento de compra del cliente.
                   Ahora bien, si no lo requieres, pues dar clic en continuar.
                 </p>
+
                 <div class="card">
                   <div class="card-body">
                     <div class="row my-5">
@@ -2294,105 +2137,109 @@ children[13].childNodes[1].innerHTML=this.value;"
                         <div class="card">
                           <div class="card-body">
                             <h5>Puntualidad</h5>
-                            <div class="card-text">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Cliente A
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Cliente B
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Cliente C
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Cliente D
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Cliente Nuevo
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Cliente Moroso
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Sin Dato/No incluir
-                                </label>
-                              </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Cliente A
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Cliente B
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Cliente C
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Cliente D
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Cliente Nuevo
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Cliente Moroso
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Sin Dato/No incluir
+                              </label>
                             </div>
                           </div>
                         </div>
@@ -2402,105 +2249,103 @@ children[13].childNodes[1].innerHTML=this.value;"
                         <div class="card">
                           <div class="card-body">
                             <h5>Tipo de cliente</h5>
-                            <div class="card-text">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Contado
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Credito Titular
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Credito Adicional
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Credito Especial
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Empleado Titular
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck2"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck2"
-                                >
-                                  Cliente Moroso
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  value=""
-                                  id="defaultCheck1"
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="defaultCheck1"
-                                >
-                                  Sin Dato/No incluir
-                                </label>
-                              </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Contado
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Credito Titular
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Credito Adicional
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Credito Especial
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Empleado Titular
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck2"
+                              >
+                                Cliente Moroso
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="defaultCheck1"
+                              >
+                                Sin Dato/No incluir
+                              </label>
                             </div>
                           </div>
                         </div>
@@ -2515,7 +2360,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck2"
+                                id="defaultCheck"
                               />
                               <label
                                 class="form-check-label"
@@ -2529,7 +2374,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 class="form-check-input"
                                 type="checkbox"
                                 value=""
-                                id="defaultCheck1"
+                                id="defaultCheck"
                               />
                               <label
                                 class="form-check-label"
@@ -2553,62 +2398,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 Elije los minimos y maximos de años de
                                 antiguedad del cliente
                               </p>
-
-                              <div slider id="slider-distance">
-                                <div>
-                                  <div inverse-left style="width: 70%"></div>
-                                  <div inverse-right style="width: 70%"></div>
-                                  <div
-                                    range
-                                    style="left: 30%; right: 40%"
-                                  ></div>
-                                  <span thumb style="left: 30%"></span>
-                                  <span thumb style="left: 60%"></span>
-                                  <div sign style="left: 30%">
-                                    <span id="value">30</span>
-                                  </div>
-                                  <div sign style="left: 60%">
-                                    <span id="value">60</span>
-                                  </div>
-                                </div>
-                                <input
-                                  type="range"
-                                  tabindex="0"
-                                  value="30"
-                                  max="100"
-                                  min="0"
-                                  step="1"
-                                  oninput="
-         this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-         var children = this.parentNode.childNodes[1].childNodes;
-         children[1].style.width=value+'%';
-         children[5].style.left=value+'%';
-         children[7].style.left=value+'%';children[11].style.left=value+'%';
-         children[11].childNodes[1].innerHTML=this.value;"
-                                />
-
-                                <input
-                                  type="range"
-                                  tabindex="0"
-                                  value="60"
-                                  max="100"
-                                  min="0"
-                                  step="1"
-                                  oninput="
-         this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-         var children = this.parentNode.childNodes[1].childNodes;
-         children[3].style.width=(100-value)+'%';
-         children[5].style.right=(100-value)+'%';
-         children[9].style.left=value+'%';children[13].style.left=value+'%';
-         children[13].childNodes[1].innerHTML=this.value;"
-                                />
-                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+
                       <div class="col-12 col-lg-6">
                         <div class="card">
                           <div class="card-body">
@@ -2616,59 +2410,8 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <div class="card-text">
                               <p class="text-center">
                                 Elije los minimos y maximos en meses de la
-                                ultima actividad del cliente
+                                ultima actividad de cliente
                               </p>
-                              <div slider id="slider-distance">
-                                <div>
-                                  <div inverse-left style="width: 70%"></div>
-                                  <div inverse-right style="width: 70%"></div>
-                                  <div
-                                    range
-                                    style="left: 30%; right: 40%"
-                                  ></div>
-                                  <span thumb style="left: 30%"></span>
-                                  <span thumb style="left: 60%"></span>
-                                  <div sign style="left: 30%">
-                                    <span id="value">30</span>
-                                  </div>
-                                  <div sign style="left: 60%">
-                                    <span id="value">60</span>
-                                  </div>
-                                </div>
-                                <input
-                                  type="range"
-                                  tabindex="0"
-                                  value="30"
-                                  max="100"
-                                  min="0"
-                                  step="1"
-                                  oninput="
-       this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-       var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-       var children = this.parentNode.childNodes[1].childNodes;
-       children[1].style.width=value+'%';
-       children[5].style.left=value+'%';
-       children[7].style.left=value+'%';children[11].style.left=value+'%';
-       children[11].childNodes[1].innerHTML=this.value;"
-                                />
-
-                                <input
-                                  type="range"
-                                  tabindex="0"
-                                  value="60"
-                                  max="100"
-                                  min="0"
-                                  step="1"
-                                  oninput="
-       this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-       var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-       var children = this.parentNode.childNodes[1].childNodes;
-       children[3].style.width=(100-value)+'%';
-       children[5].style.right=(100-value)+'%';
-       children[9].style.left=value+'%';children[13].style.left=value+'%';
-       children[13].childNodes[1].innerHTML=this.value;"
-                                />
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -2679,11 +2422,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad en R</h5>
+                            <h5>Fecha de ultima actividad e R</h5>
                             <div class="card-text">
                               <input
                                 type="text"
-                                id="calendario"
+                                id="calendari"
                                 name=""
                                 readonly=""
                               />
@@ -2694,11 +2437,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad en M</h5>
+                            <h5>Fecha de ultima actividad e M</h5>
                             <div class="card-text">
                               <input
                                 type="text"
-                                id="calendario"
+                                id="calendari"
                                 name=""
                                 readonly=""
                               />
@@ -2709,11 +2452,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                       <div class="col-12 col-lg-4">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad en T</h5>
+                            <h5>Fecha de ultima actividad e T</h5>
                             <div class="card-text">
                               <input
                                 type="text"
-                                id="calendario"
+                                id="calendari"
                                 name=""
                                 readonly=""
                               />
@@ -2742,29 +2485,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                       Elije los minimos y maximos de la linea de
                                       credito otorgada al cliente
                                     </p>
-                                    <div slider id="slider-distance">
-                                      <div>
-                                        <div
-                                          inverse-left
-                                          style="width: 70%"
-                                        ></div>
-                                        <div
-                                          inverse-right
-                                          style="width: 70%"
-                                        ></div>
-                                        <div
-                                          range
-                                          style="left: 30%; right: 40%"
-                                        ></div>
-                                        <span thumb style="left: 30%"></span>
-                                        <span thumb style="left: 60%"></span>
-                                        <div sign style="left: 30%">
-                                          <span id="value">30</span>
-                                        </div>
-                                        <div sign style="left: 60%">
-                                          <span id="value">60</span>
-                                        </div>
-                                      </div>
+                                    <div slider i="slider-distanc">
                                       <input
                                         type="range"
                                         tabindex="0"
@@ -2772,14 +2493,6 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         max="100"
                                         min="0"
                                         step="1"
-                                        oninput="
-           this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-           var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-           var children = this.parentNode.childNodes[1].childNodes;
-           children[1].style.width=value+'%';
-           children[5].style.left=value+'%';
-           children[7].style.left=value+'%';children[11].style.left=value+'%';
-           children[11].childNodes[1].innerHTML=this.value;"
                                       />
 
                                       <input
@@ -2789,14 +2502,6 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         max="100"
                                         min="0"
                                         step="1"
-                                        oninput="
-           this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-           var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-           var children = this.parentNode.childNodes[1].childNodes;
-           children[3].style.width=(100-value)+'%';
-           children[5].style.right=(100-value)+'%';
-           children[9].style.left=value+'%';children[13].style.left=value+'%';
-           children[13].childNodes[1].innerHTML=this.value;"
                                       />
                                     </div>
                                   </div>
@@ -2813,7 +2518,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         class="form-check-input"
                                         type="checkbox"
                                         value=""
-                                        id="defaultCheck1"
+                                        id="defaultCheck"
                                       />
                                       <label
                                         class="form-check-label"
@@ -2827,7 +2532,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         class="form-check-input"
                                         type="checkbox"
                                         value=""
-                                        id="defaultCheck2"
+                                        id="defaultCheck"
                                       />
                                       <label
                                         class="form-check-label"
@@ -2841,7 +2546,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         class="form-check-input"
                                         type="checkbox"
                                         value=""
-                                        id="defaultCheck1"
+                                        id="defaultCheck"
                                       />
                                       <label
                                         class="form-check-label"
@@ -2855,13 +2560,13 @@ children[13].childNodes[1].innerHTML=this.value;"
                                         class="form-check-input"
                                         type="checkbox"
                                         value=""
-                                        id="defaultCheck2"
+                                        id="defaultCheck"
                                       />
                                       <label
                                         class="form-check-label"
                                         for="defaultCheck2"
                                       >
-                                        Sin identificar
+                                        Sin identifica
                                       </label>
                                     </div>
                                   </div>
@@ -2869,39 +2574,12 @@ children[13].childNodes[1].innerHTML=this.value;"
                               </div>
                             </div>
                           </div>
-                          <br />
 
                           <div class="row">
                             <div class="col-12 col-lg-6 mb-3">
                               <div class="card">
                                 <div class="card-body">
                                   <h5>Linea de C</h5>
-                                  <div class="card-text">
-                                    <div slider id="slider-distance">
-                                      <div>
-                                        <div
-                                          inverse-left
-                                          style="width: 70%"
-                                        ></div>
-                                        <div
-                                          inverse-right
-                                          style="width: 70%"
-                                        ></div>
-                                        <div
-                                          range
-                                          style="left: 30%; right: 40%"
-                                        ></div>
-                                        <span thumb style="left: 30%"></span>
-                                        <span thumb style="left: 60%"></span>
-                                        <div sign style="left: 30%">
-                                          <span id="value">30</span>
-                                        </div>
-                                        <div sign style="left: 60%">
-                                          <span id="value">60</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2926,7 +2604,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             </section>
             <!-- END COMPORTAMIENTO DEL CLIENTE -->
 
@@ -2959,7 +2637,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                       <option>DURANGO</option>
                       <option>GUANAJUATO</option>
                       <option>GUERRERO</option>
-                      <option>HIDALGO</option>
+                      <option>HIDALG</option>
                       <option>JALISCO</option>
                       <option>MEXICO</option>
                       <option>MICHOACAN DE OCAMPO</option>
@@ -3017,7 +2695,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3031,7 +2709,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3045,7 +2723,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3059,7 +2737,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3110,14 +2788,14 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <div class="card-text">
                               <p>
                                 Grandes extensiones territoriales en las que se
-                                divide el territorio nacional
+                                divide e territorio nacional
                               </p>
                               <div class="form-check">
                                 <input
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3131,7 +2809,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3145,7 +2823,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3159,7 +2837,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3173,7 +2851,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3193,14 +2871,14 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <div class="card-text">
                               <p>
                                 Grandes extensiones territoriales en las que se
-                                divide el territorio nacional
+                                divide e territorio nacional
                               </p>
                               <div class="form-check">
                                 <input
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3214,7 +2892,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3228,7 +2906,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3242,7 +2920,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3256,7 +2934,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3276,7 +2954,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <div class="card-text">
                               <p>
                                 Grandes extensiones territoriales en las que se
-                                divide el territorio nacional para analisis de
+                                divide e territorio nacional para analisis de
                                 mercado segun la Asocion de Internet de Mexico.
                               </p>
                               <div class="form-check">
@@ -3284,7 +2962,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3298,7 +2976,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3312,7 +2990,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck1"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3326,13 +3004,13 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
                                   for="defaultCheck2"
                                 >
-                                  No identificado
+                                  No identificad
                                 </label>
                               </div>
                               <div class="form-check">
@@ -3340,7 +3018,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3354,7 +3032,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3368,7 +3046,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3382,7 +3060,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3396,7 +3074,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                   class="form-check-input"
                                   type="checkbox"
                                   value=""
-                                  id="defaultCheck2"
+                                  id="defaultCheck"
                                 />
                                 <label
                                   class="form-check-label"
@@ -3451,10 +3129,10 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck1"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck1">
-                          id Cliente
+                          id Client
                         </label>
                       </div>
                       <div class="form-check">
@@ -3462,7 +3140,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck2"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck2">
                           Genero
@@ -3475,7 +3153,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck1"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck1">
                           Nombre propio
@@ -3486,10 +3164,10 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck2"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck2">
-                          Apellido Paterno
+                          Apellido Patern
                         </label>
                       </div>
                       <div class="form-check">
@@ -3497,10 +3175,10 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck1"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck1">
-                          Apellido Materno
+                          Apellido Matern
                         </label>
                       </div>
                     </div>
@@ -3510,7 +3188,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck2"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck2">
                           Correo electronico
@@ -3521,7 +3199,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                           class="form-check-input"
                           type="checkbox"
                           value=""
-                          id="defaultCheck1"
+                          id="defaultCheck"
                         />
                         <label class="form-check-label" for="defaultCheck1">
                           Telefono
@@ -3553,7 +3231,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                         >Tu nombre</label
                       >
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="nombre" />
+                        <input type="text" class="form-control" id="nombr" />
                       </div>
                     </div>
                     <div class="form-group row">
@@ -3561,7 +3239,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                         >Área a la que perteneces</label
                       >
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="area" />
+                        <input type="text" class="form-control" id="are" />
                       </div>
                     </div>
 
@@ -3571,25 +3249,25 @@ children[13].childNodes[1].innerHTML=this.value;"
                         recomendación?</label
                       >
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="tipo" />
+                        <input type="text" class="form-control" id="tip" />
                       </div>
                     </div>
 
                     <fieldset class="form-group">
                       <div class="row">
-                        <legend class="col-form-label col-12 col-md-4 pt-0">
+                        <div class="col-form-label col-12 col-md-4 pt-0">
                           ¿En que canal enviaras el segmento o recomendación?
-                        </legend>
+                        </div>
                         <div class="col-12 col-md-8">
                           <div class="form-check">
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="gridRadios"
-                              id="gridRadios1"
+                              name="gridRadio"
+                              id="gridRadios"
                               value="option1"
                             />
-                            <label class="form-check-label" for="gridRadios1">
+                            <label class="form-check-label" for="gridRadios">
                               Email
                             </label>
                           </div>
@@ -3597,11 +3275,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="gridRadios"
-                              id="gridRadios2"
+                              name="gridRadio"
+                              id="gridRadios"
                               value="option2"
                             />
-                            <label class="form-check-label" for="gridRadios2">
+                            <label class="form-check-label" for="gridRadios">
                               SMS
                             </label>
                           </div>
@@ -3609,23 +3287,23 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="gridRadios"
-                              id="gridRadios3"
+                              name="gridRadio"
+                              id="gridRadios"
                               value="option3"
                             />
-                            <label class="form-check-label" for="gridRadios3">
-                              Paid Media
+                            <label class="form-check-label" for="gridRadios">
+                              Paid Medi
                             </label>
                           </div>
                           <div class="form-check">
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="gridRadios"
-                              id="gridRadios2"
+                              name="gridRadio"
+                              id="gridRadios"
                               value="option2"
                             />
-                            <label class="form-check-label" for="gridRadios2">
+                            <label class="form-check-label" for="gridRadios">
                               Venta por Telefono
                             </label>
                           </div>
@@ -3633,11 +3311,11 @@ children[13].childNodes[1].innerHTML=this.value;"
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="gridRadios"
-                              id="gridRadios3"
+                              name="gridRadio"
+                              id="gridRadios"
                               value="option3"
                             />
-                            <label class="form-check-label" for="gridRadios3">
+                            <label class="form-check-label" for="gridRadios">
                               Otro
                             </label>
                           </div>
@@ -3776,11 +3454,109 @@ children[13].childNodes[1].innerHTML=this.value;"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <!-- Slider -->
+    <script src="http://bootstraptema.ru/plugins/2018/irs/ion.rangeSlider.min.js"></script>
+
     <!-- Vue -->
     <!-- version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- production version, optimized for size and speed -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+
+    <script>
+      $(document).ready(function () {
+        $("#range_01").ionRangeSlider();
+
+        $("#range_02").ionRangeSlider({
+          min: 100,
+          max: 1000,
+          from: 550,
+        });
+
+        $("#range_03").ionRangeSlider({
+          type: "double",
+          grid: true,
+          min: 0,
+          max: 1000,
+          from: 200,
+          to: 800,
+          prefix: "$",
+        });
+
+        //
+        // Rangos de la sección de: Manual -> edad
+        //
+        const ManualEdades = [
+          { type: "double", grid: true, min: 0, max: 100, from: 30, to: 75 },
+          { type: "double", grid: true, min: 0, max: 100, from: 25, to: 55 },
+          { type: "double", grid: true, min: 0, max: 100, from: 20, to: 45 },
+        ];
+
+        $("#rangeEdad_1").ionRangeSlider(ManualEdades[0]);
+        $("#rangeEdad_2").ionRangeSlider(ManualEdades[1]);
+        $("#rangeEdad_3").ionRangeSlider(ManualEdades[2]);
+
+        const rangeSalarioPromedioMensual = {
+          type: "double",
+          grid: true,
+          min: 0,
+          max: 100000,
+          from: 15000,
+          to: 20000,
+          prefix: "$",
+          step: 5000,
+        };
+        $("#rangeSalarioPromedioMensual").ionRangeSlider(
+          rangeSalarioPromedioMensual
+        );
+
+        $("#range_05").ionRangeSlider({
+          type: "double",
+          grid: true,
+          min: -1000,
+          max: 1000,
+          from: -500,
+          to: 500,
+          step: 250,
+        });
+
+        $("#range_06").ionRangeSlider({
+          grid: true,
+          from: 3,
+          values: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ],
+        });
+
+        $("#range_07").ionRangeSlider({
+          grid: true,
+          min: 1000,
+          max: 1000000,
+          from: 200000,
+          step: 1000,
+          prettify_enabled: true,
+        });
+
+        $("#range_08").ionRangeSlider({
+          min: 100,
+          max: 1000,
+          from: 550,
+          disable: true,
+        });
+      });
+    </script>
+
     <!-- Custom js -->
     <script src="./assets/js/main.js"></script>
   </body>
