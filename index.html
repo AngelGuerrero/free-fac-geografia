@@ -821,17 +821,18 @@
                       Elije el tipo de clasificación de edad del cliente que mas
                       se adecue a tus necesidades.
                     </p>
-                    <div class="accordion" id="accordionExample">
+
+                    <div id="accordionEdad" class="accordion">
                       <div class="card">
-                        <div class="card-header" id="headingOnee">
+                        <div class="card-header" id="headingEdad_1">
                           <h2 class="mb-0">
                             <button
                               class="btn btn-link btn-block text-left"
                               type="button"
                               data-toggle="collapse"
-                              data-target="#collapseOnee"
+                              data-target="#collapseEdad_1"
                               aria-expanded="true"
-                              aria-controls="collapseOnee"
+                              aria-controls="collapseEdad_1"
                             >
                               <h5>Manual</h5>
                             </button>
@@ -839,10 +840,10 @@
                         </div>
 
                         <div
-                          id="collapseOnee"
+                          id="collapseEdad_1"
                           class="collapse show"
-                          aria-labelledby="headingOnee"
-                          data-parent="#accordionExample"
+                          aria-labelledby="headingEdad_1"
+                          data-parent="#accordionEdad"
                         >
                           <div class="card-body">
                             <div class="row">
@@ -889,23 +890,24 @@
                           </div>
                         </div>
                       </div>
+
                       <div class="card">
-                        <div class="card-header">
+                        <div id="headingEdad_2" class="card-header">
                           <button
                             class="btn btn-link btn-block text-left collapsed"
                             type="button"
                             data-toggle="collapse"
-                            data-target="#collapseTwoo"
+                            data-target="#collapseEdad_2"
                             aria-expanded="false"
-                            aria-controls="collapseTwoo"
+                            aria-controls="collapseEdad_2"
                           >
                             <h5>Rangos de edad</h5>
                           </button>
                         </div>
                         <div
-                          id="collapseTwoo"
+                          id="collapseEdad_2"
                           class="collapse"
-                          data-parent="#accordionExample"
+                          data-parent="#accordionEdad"
                         >
                           <div class="card-body">
                             <p class="text-center">
@@ -1135,25 +1137,25 @@
                         </div>
                       </div>
                       <div class="card">
-                        <div class="card-header" id="headingThreee">
+                        <div class="card-header" id="headingEdad_3">
                           <h2 class="mb-0">
                             <button
                               class="btn btn-link btn-block text-left collapsed"
                               type="button"
                               data-toggle="collapse"
-                              data-target="#collapseThreee"
+                              data-target="#collapseEdad_3"
                               aria-expanded="false"
-                              aria-controls="collapseThreee"
+                              aria-controls="collapseEdad_3"
                             >
                               <h5>Etapas de vida</h5>
                             </button>
                           </h2>
                         </div>
                         <div
-                          id="collapseThreee"
+                          id="collapseEdad_3"
                           class="collapse"
-                          aria-labelledby="headingThreee"
-                          data-parent="#accordionExample"
+                          aria-labelledby="headingEdad_3"
+                          data-parent="#accordionEdad"
                         >
                           <div class="card-body">
                             <p class="text-center">
@@ -1233,26 +1235,27 @@
                           </div>
                         </div>
                       </div>
+
                       <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="headingEdad_4">
                           <h2 class="mb-0">
                             <button
                               class="btn btn-link btn-block text-left collapsed"
                               type="button"
                               data-toggle="collapse"
-                              data-target="#collapseFour"
+                              data-target="#collapseEdad_4"
                               aria-expanded="false"
-                              aria-controls="collapseFour"
+                              aria-controls="collapseEdad_4"
                             >
                               <h5>Generación</h5>
                             </button>
                           </h2>
                         </div>
                         <div
-                          id="collapseFour"
+                          id="collapseEdad_4"
                           class="collapse"
-                          aria-labelledby="headingFour"
-                          data-parent="#accordionExample"
+                          aria-labelledby="headingEdad_4"
+                          data-parent="#accordionEdad"
                         >
                           <div class="card-body">
                             <p class="text-center">
@@ -1790,19 +1793,19 @@
                     <p class="text-center">
                       Elije el ingreso del cliente que mejor considere.
                     </p>
-                    <div class="accordion">
+                    <div id="accordionSalario" class="accordion">
                       <div class="card">
-                        <div class="card-header">
+                        <div class="card-header" id="headingSalario_1">
                           <button
                             class="btn btn-link btn-block text-left"
                             type="button"
                             data-toggle="collapse"
                             data-target="#collapseSalarioMinimo"
                             aria-expanded="true"
-                            aria-controls="collapseOne"
+                            aria-controls="collapseSalarioMinimo"
                           >
                             Salarios minimos
-                            <p>
+                            <p class="m-0">
                               Salario mínimo general vigente a partir del 1° de
                               enero de 2020 corresponde a $123.22 pesos
                             </p>
@@ -1812,8 +1815,8 @@
                         <div
                           id="collapseSalarioMinimo"
                           class="collapse show"
-                          aria-labelledby="headingOn"
-                          data-parent="#accordionExample"
+                          aria-labelledby="headingSalario_1"
+                          data-parent="#accordionSalario"
                         >
                           <div class="card-body">
                             <p class="text-center">
@@ -1930,27 +1933,28 @@
                         </div>
                       </div>
                       <div class="card">
-                        <div class="card-header">
+                        <div id="headingSalario_2" class="card-header">
                           <button
                             class="btn btn-link btn-block text-left collapsed"
                             type="button"
                             data-toggle="collapse"
                             data-target="#collapseIngresoPromedioMensual"
                             aria-expanded="false"
-                            aria-controls="collapseTwo"
+                            aria-controls="collapseIngresoPromedioMensual"
                           >
                             Ingreso promedio mensual
-                            <p>
+                            <p class="m-0">
                               Elije los minimos y maximos del ingreso promedio
                               mensual
                             </p>
                           </button>
                         </div>
+
                         <div
                           id="collapseIngresoPromedioMensual"
-                          class="collapse show"
-                          aria-labelledby="headingTwo"
-                          data-parent="#accordionExample"
+                          class="collapse"
+                          aria-labelledby="headingSalario_2"
+                          data-parent="#accordionSalario"
                         >
                           <div class="card-body">
                             <div class="row">
@@ -1973,28 +1977,30 @@
                           </div>
                         </div>
                       </div>
+
                       <div class="card">
-                        <div class="card-header">
+                        <div id="headingSalario_3" class="card-header">
                           <button
                             class="btn btn-link btn-block text-left collapsed"
                             type="button"
                             data-toggle="collapse"
                             data-target="#collapseNivelSocioEconomico"
                             aria-expanded="false"
-                            aria-controls="collapseThree"
+                            aria-controls="collapseNivelSocioEconomico"
                           >
                             Nivel socioeconómico
-                            <p>
+                            <p class="m-0">
                               Selecciona el Nivel Socieconomico de tu interes.
                               *Datos calculados al 2020
                             </p>
                           </button>
                         </div>
+
                         <div
                           id="collapseNivelSocioEconomico"
                           class="collapse"
-                          aria-labelledby="headingThree"
-                          data-parent="#accordionExample"
+                          aria-labelledby="headingSalario_3"
+                          data-parent="#accordionSalario"
                         >
                           <div class="card-body">
                             <p class="text-center mb-5">
@@ -2457,7 +2463,7 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="mb-3">Fecha de ultima actividad e R</h5>
+                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e R</h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadR" />
                             </div>
@@ -2467,7 +2473,7 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="mb-3">Fecha de ultima actividad e M</h5>
+                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e M</h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadM" />
                             </div>
@@ -2477,7 +2483,7 @@
                       <div class="col-12 col-lg-4">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="mb-3">Fecha de ultima actividad e T</h5>
+                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e T</h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadT" />
                             </div>
@@ -2520,7 +2526,7 @@
                             <div class="col-12 col-lg-6 mb-3">
                               <div class="card">
                                 <div class="card-body">
-                                  <h5>Canal de Abono</h5>
+                                  <h5 class="text-center">Canal de Abono</h5>
                                   <div class="card-text">
                                     <div class="form-check">
                                       <input
@@ -2588,7 +2594,7 @@
                             <div class="col-12 col-lg-6 mb-3">
                               <div class="card">
                                 <div class="card-body">
-                                  <h5>Linea de C</h5>
+                                  <h5 class="text-center">Linea de C</h5>
                                   <div class="form-group row">
                                     <div class="col-12">
                                       <input type="text" id="rangeLineaDeC" />
@@ -2600,7 +2606,7 @@
                             <div class="col-12 col-lg-6 mb-3">
                               <div class="card">
                                 <div class="card-body">
-                                  <h5 class="mb-3">
+                                  <h5 class="mb-3 text-center">
                                     Fecha del ultimo movimiento de A
                                   </h5>
                                   <div class="flex justify-center">
