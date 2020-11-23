@@ -2429,7 +2429,7 @@
                                   id="rangeClienteUltimaActividad"
                                 />
                               </div>
-                          </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2503,13 +2503,13 @@
                                       credito otorgada al cliente
                                     </p>
                                     <div class="form-group row">
-                              <div class="col-12">
-                                <input
-                                  type="text"
-                                  id="rangeImporteAbonado"
-                                />
-                              </div>
-                          </div>
+                                      <div class="col-12">
+                                        <input
+                                          type="text"
+                                          id="rangeImporteAbonado"
+                                        />
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -2586,6 +2586,11 @@
                               <div class="card">
                                 <div class="card-body">
                                   <h5>Linea de C</h5>
+                                  <div class="form-group row">
+                                    <div class="col-12">
+                                      <input type="text" id="rangeLineaDeC" />
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -3547,7 +3552,6 @@
           rangeClienteUltimaActividad
         );
 
-
         const rangeSalarioPromedioMensual = {
           type: "double",
           grid: true,
@@ -3563,9 +3567,16 @@
         );
 
         const rangeImporteAbonado = {
-          type: "double", grid: true, min: 0, max: 100, from: 20, to: 45, prefix: "$"
-        }
-        $("#rangeImporteAbonado").ionRangeSlider(rangeImporteAbonado)
+          type: "double",
+          grid: true,
+          min: 0,
+          max: 100,
+          from: 20,
+          to: 45,
+          prefix: "$",
+        };
+        $("#rangeImporteAbonado").ionRangeSlider(rangeImporteAbonado);
+        $("#rangeLineaDeC").ionRangeSlider(rangeImporteAbonado);
 
         $("#range_07").ionRangeSlider({
           grid: true,
@@ -3575,7 +3586,6 @@
           step: 1000,
           prettify_enabled: true,
         });
-
       });
     </script>
 
