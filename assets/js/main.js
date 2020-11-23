@@ -25,11 +25,21 @@ const vm = new Vue({
     // Es la vista que está viendo el usuario
     // Corresponde a el número de paso actual.
     // 
-    pasoSeleccionado: 4
+    pasoSeleccionado: 0
+  },
+
+  computed: {
+    showPrevButton () {
+      return this.pasoSeleccionado !== 0
+    },
+
+    showNextButton () {
+      return this.pasoSeleccionado < (this.pasos.length - 1)
+    }
   },
 
   methods: {
-    onClickSeleccionarPaso(index) {
+    onClickSeleccionarPaso (index) {
       this.removeClasses()
 
       let i = 0
@@ -39,17 +49,17 @@ const vm = new Vue({
       this.pasoSeleccionado = i - 1
     },
 
-    removeClasses() {
+    removeClasses () {
       this.pasos.map(item => { item.active = false })
     },
 
-    prevSection() {
+    prevSection () {
       if ((this.pasoSeleccionado - 1) < 0) return
 
       this.onClickSeleccionarPaso(this.pasoSeleccionado - 1)
     },
 
-    nextSection() {
+    nextSection () {
       if ((this.pasoSeleccionado + 1) >= this.pasos.length) return
 
       this.onClickSeleccionarPaso(this.pasoSeleccionado + 1)
