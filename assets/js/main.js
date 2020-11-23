@@ -37,6 +37,11 @@ const vm = new Vue({
     fechaUltimaActividadM: null,
     fechaUltimaActividadT: null,
     fechaUltimoMovimientoA: null,
+
+    // 
+    // SECCIÓN DE FORMULARIO
+    // 
+    fechaInicioCampanaOProyecto: null
   },
 
   computed: {

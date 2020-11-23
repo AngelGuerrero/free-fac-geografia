@@ -51,7 +51,7 @@
 .irs-bar-edge {
   position: absolute;
   display: block;
-  top: 0;
+  /* top: 0; */
   left: 0;
 }
 

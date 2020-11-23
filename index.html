@@ -2,12 +2,21 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="./assets/img/question.ico" />
+
     <title>Proyecto final</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind CSS -->
     <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.0-alpha.16/tailwind.min.css"
+      integrity="sha512-Rho6HzwBF1i1Y+HNljdwJ2/6eQ4koDSeQF2OdtPqNJYv8u+M4kuKk6NJ/pgttyCvB/BDdWmGvxx1qqB7f5CrFg=="
+      crossorigin="anonymous"
     />
     <!-- Bootstrap CSS -->
     <link
@@ -66,7 +75,7 @@
       <!-- End navbar -->
 
       <!-- Content -->
-      <main id="content" class="container-fluid py-5">
+      <main id="content" class="py-5">
         <header class="content__header">
           <h1 class="text-center text-2xl">Modelos de Segmentación</h1>
           <h2 class="text-center text-xl">Facultad Geografia</h2>
@@ -138,7 +147,7 @@
 
         <div class="content__body p-4">
           <!-- Form steps -->
-          <div class="container mb-4">
+          <div class="container-fluid mb-4">
             <div class="multisteps-form__progress">
               <!-- 
                 Se iteran los pasos que debe seguir el usuario
@@ -157,7 +166,7 @@
           <!-- End steps -->
 
           <!-- Content steps -->
-          <div class="container py-4 bg-white shadow rounded">
+          <div class="container-fluid py-4 bg-white shadow rounded">
             <!-- SECCIÓN MODELOS --->
             <section
               v-show="pasoSeleccionado === 0"
@@ -170,7 +179,9 @@
                 </h3>
                 <div class="card my-4">
                   <div class="card-body">
-                    <div class="container md:text-center">
+                    <div
+                      class="container flex flex-col md:flex-row md:justify-center"
+                    >
                       <div class="form-check form-check-inline">
                         <input
                           class="form-check-input"
@@ -639,7 +650,7 @@
                       </div>
                       <div
                         id="collapseThree"
-                        class="collapse"
+                        class="collapse show"
                         aria-labelledby="headingThree"
                         data-parent="#accordionExample"
                       >
@@ -649,68 +660,74 @@
                             adecuadas a tu campaña.
                           </p>
                           <h5>Predicción de Puntualidad</h5>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="chkPrediccion_1"
-                              value="option1"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="chkPrediccion_1"
-                              >Cliente A</label
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="chkPrediccion_2"
-                              value="option2"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="chkPrediccion_2"
-                              >Cliente B</label
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="chkPrediccion_3"
-                              value="option3"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="chkPrediccion_3"
-                              >Cliente C</label
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="inlineCheckbox2"
-                              value="option2"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="inlineCheckbox2"
-                              >Cliente D</label
-                            >
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="chkPredicion_4"
-                              value="option3"
-                            />
-                            <label class="form-check-label" for="chkPredicion_4"
-                              >Cliente Z</label
-                            >
+                          <div
+                            class="flex flex-col md:flex-row md:justify-around"
+                          >
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="chkPrediccion_1"
+                                value="option1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="chkPrediccion_1"
+                                >Cliente A</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="chkPrediccion_2"
+                                value="option2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="chkPrediccion_2"
+                                >Cliente B</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="chkPrediccion_3"
+                                value="option3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="chkPrediccion_3"
+                                >Cliente C</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox2"
+                                value="option2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="inlineCheckbox2"
+                                >Cliente D</label
+                              >
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="chkPredicion_4"
+                                value="option3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="chkPredicion_4"
+                                >Cliente Z</label
+                              >
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2463,7 +2480,9 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e R</h4>
+                            <h4 class="mb-3 text-sm text-center">
+                              Fecha de ultima actividad e R
+                            </h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadR" />
                             </div>
@@ -2473,7 +2492,9 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e M</h4>
+                            <h4 class="mb-3 text-sm text-center">
+                              Fecha de ultima actividad e M
+                            </h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadM" />
                             </div>
@@ -2483,7 +2504,9 @@
                       <div class="col-12 col-lg-4">
                         <div class="card">
                           <div class="card-body">
-                            <h4 class="mb-3 text-sm text-center">Fecha de ultima actividad e T</h4>
+                            <h4 class="mb-3 text-sm text-center">
+                              Fecha de ultima actividad e T
+                            </h4>
                             <div class="flex justify-center">
                               <v-date-picker v-model="fechaUltimaActividadT" />
                             </div>
@@ -3175,7 +3198,10 @@
                           value=""
                           id="chkDatos_nombrePropio"
                         />
-                        <label class="form-check-label" for="chkDatos_nombrePropio">
+                        <label
+                          class="form-check-label"
+                          for="chkDatos_nombrePropio"
+                        >
                           Nombre propio
                         </label>
                       </div>
@@ -3186,7 +3212,10 @@
                           value=""
                           id="chkDatos_apellidoPaterno"
                         />
-                        <label class="form-check-label" for="chkDatos_apellidoPaterno">
+                        <label
+                          class="form-check-label"
+                          for="chkDatos_apellidoPaterno"
+                        >
                           Apellido Paterno
                         </label>
                       </div>
@@ -3197,7 +3226,10 @@
                           value=""
                           id="chkDatos_apellidoMaterno"
                         />
-                        <label class="form-check-label" for="chkDatos_apellidoMaterno">
+                        <label
+                          class="form-check-label"
+                          for="chkDatos_apellidoMaterno"
+                        >
                           Apellido Materno
                         </label>
                       </div>
@@ -3210,7 +3242,10 @@
                           value=""
                           id="chkDatos_correoElectronico"
                         />
-                        <label class="form-check-label" for="chkDatos_correoElectronico">
+                        <label
+                          class="form-check-label"
+                          for="chkDatos_correoElectronico"
+                        >
                           Correo electronico
                         </label>
                       </div>
@@ -3323,7 +3358,10 @@
                               id="radioVentaPorTelefono"
                               value="venta por telefono"
                             />
-                            <label class="form-check-label" for="radioVentaPorTelefono">
+                            <label
+                              class="form-check-label"
+                              for="radioVentaPorTelefono"
+                            >
                               Venta por Telefono
                             </label>
                           </div>
@@ -3369,36 +3407,47 @@
                       </div>
 
                       <div class="form-group row">
-                        <label for="area" class="col-12 col-md-4 col-form-label"
+                        <label
+                          for="area"
+                          class="col-12 col-md-4 col-form-label flex items-center"
                           >¿Cual es la fecha de inicio de tu campaña o
                           proyecto?</label
                         >
-                        <div class="col-12 col-md-8">
-                          <input
-                            type="text"
-                            id="calendario"
-                            name=""
-                            readonly=""
+                        <div class="col-12 col-md-8 flex justify-center">
+                          <v-date-picker
+                            v-model="fechaInicioCampanaOProyecto"
                           />
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="correoElectronicoDestinatario" class="col-12 col-md-4 col-form-label"
+                        <label
+                          for="correoElectronicoDestinatario"
+                          class="col-12 col-md-4 col-form-label"
                           >Correo electronico donde enviaremos tu
                           archivo.</label
                         >
                         <div class="col-12 col-md-8">
-                          <input type="email" class="form-control" id="correoElectronicoDestinatario" />
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="correoElectronicoDestinatario"
+                          />
                         </div>
                       </div>
 
                       <div class="form-group row">
-                        <label for="nombreArchivo" class="col-12 col-md-4 col-form-label"
+                        <label
+                          for="nombreArchivo"
+                          class="col-12 col-md-4 col-form-label"
                           >¿Como quieres nombrar tu archivo?</label
                         >
                         <div class="col-12 col-md-8">
-                          <input type="text" class="form-control" id="nombreArchivo" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nombreArchivo"
+                          />
                         </div>
                       </div>
                       <h4 class="text-center">¡Listo!</h4>
@@ -3411,22 +3460,26 @@
 
             <!-- Botones para seleccionar paso -->
             <section class="flex justify-between pt-3">
-              <button
+              <a
+                href="#"
+                type="button"
                 v-if="showPrevButton"
                 v-on:click="prevSection"
                 class="btn btn-primary"
                 title="Prev"
               >
                 Anterior
-              </button>
-              <button
+              </a>
+              <a
+                title="Next"
+                type="button"
                 v-if="showNextButton"
                 v-on:click="nextSection"
                 class="btn btn-primary ml-auto"
-                title="Next"
+                href="#app"
               >
                 Continuar
-              </button>
+              </a>
               <!-- 
                 Botón para descargar, botón que se muestra al final de los pasos
               -->
@@ -3463,6 +3516,18 @@
       <!-- End Footer -->
     </div>
 
+    <!-- Vue -->
+    <!-- version, includes helpful console warnings -->
+    <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Link VCalendar Javascript (Plugin automatically installed) -->
+    <script src="https://unpkg.com/v-calendar"></script>
+
+    <!-- Custom js -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Scripts -->
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -3477,34 +3542,8 @@
     <!-- Slider -->
     <script src="http://bootstraptema.ru/plugins/2018/irs/ion.rangeSlider.min.js"></script>
 
-    <!-- Vue -->
-    <!-- version, includes helpful console warnings -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <!-- Link VCalendar Javascript (Plugin automatically installed) -->
-    <script src="https://unpkg.com/v-calendar"></script>
-    <!-- production version, optimized for size and speed -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
-
     <script>
       $(document).ready(function () {
-        $("#range_01").ionRangeSlider();
-
-        $("#range_02").ionRangeSlider({
-          min: 100,
-          max: 1000,
-          from: 550,
-        });
-
-        $("#range_03").ionRangeSlider({
-          type: "double",
-          grid: true,
-          min: 0,
-          max: 1000,
-          from: 200,
-          to: 800,
-          prefix: "$",
-        });
-
         //
         // Rangos de la sección de: Manual -> edad
         //
@@ -3588,19 +3627,7 @@
         };
         $("#rangeImporteAbonado").ionRangeSlider(rangeImporteAbonado);
         $("#rangeLineaDeC").ionRangeSlider(rangeImporteAbonado);
-
-        $("#range_07").ionRangeSlider({
-          grid: true,
-          min: 1000,
-          max: 1000000,
-          from: 200000,
-          step: 1000,
-          prettify_enabled: true,
-        });
       });
     </script>
-
-    <!-- Custom js -->
-    <script src="./assets/js/main.js"></script>
   </body>
 </html>
