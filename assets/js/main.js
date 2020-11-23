@@ -25,7 +25,7 @@ const vm = new Vue({
     // Es la vista que está viendo el usuario
     // Corresponde a el número de paso actual.
     // 
-    pasoSeleccionado: 3
+    pasoSeleccionado: 4
   },
 
   methods: {

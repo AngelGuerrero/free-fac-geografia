@@ -2945,7 +2945,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                 </p>
                 <div class="form-row my-4">
                   <div class="col-12 col-sm-6">
-                    <select class="multisteps-form__select form-control">
+                    <select class="form-control">
                       <option selected="selected">Estado</option>
                       <option>AGUASCALIENTES</option>
                       <option>BAJA CALIFORNIA</option>
@@ -2982,7 +2982,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                     </select>
                   </div>
                   <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                    <select class="multisteps-form__select form-control">
+                    <select class="form-control">
                       <option selected="selected">Municipio</option>
                       <option>ACAMBAY</option>
                       <option>ACOLMAN</option>
@@ -3084,9 +3084,7 @@ children[13].childNodes[1].innerHTML=this.value;"
                                 similares entre espacios urbanos y son nombradas
                                 a razon de la ciudad principal.
                               </p>
-                              <select
-                                class="multisteps-form__select form-control"
-                              >
+                              <select class="form-control">
                                 <option selected="selected">Clusters</option>
                                 <option></option>
                                 <option></option>
@@ -3429,6 +3427,112 @@ children[13].childNodes[1].innerHTML=this.value;"
               </article>
             </section>
             <!-- END SECCIÓN GEOGRÁFICOS -->
+
+            <!-- SECCIÓN ARCHIVOS DE SALIDA -->
+            <section
+              v-show="pasoSeleccionado === 4"
+              class="mt-3"
+              data-animation="scaleIn"
+            >
+              <h3 class="text-center">Datos</h3>
+              <p class="text-center">
+                ¡Ya casí terminas! <br />
+                Aquí deberas elegir la información del cliente que te es util
+                para tu campaña o proyecto. El formato del archivo que se
+                exportará es en .csv
+              </p>
+              <h5>Datos a exportar</h5>
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-row mt-4">
+                    <div class="col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck1"
+                        />
+                        <label class="form-check-label" for="defaultCheck1">
+                          id Cliente
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck2"
+                        />
+                        <label class="form-check-label" for="defaultCheck2">
+                          Genero
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck1"
+                        />
+                        <label class="form-check-label" for="defaultCheck1">
+                          Nombre propio
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck2"
+                        />
+                        <label class="form-check-label" for="defaultCheck2">
+                          Apellido Paterno
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck1"
+                        />
+                        <label class="form-check-label" for="defaultCheck1">
+                          Apellido Materno
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck2"
+                        />
+                        <label class="form-check-label" for="defaultCheck2">
+                          Correo electronico
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="defaultCheck1"
+                        />
+                        <label class="form-check-label" for="defaultCheck1">
+                          Telefono
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- END SECCIÓN ARCHIVOS DE SALIDA -->
 
             <!-- Botones para seleccionar paso -->
             <section class="flex justify-between pt-3">
