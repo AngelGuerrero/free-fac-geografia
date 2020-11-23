@@ -25,7 +25,18 @@ const vm = new Vue({
     // Es la vista que está viendo el usuario
     // Corresponde a el número de paso actual.
     // 
-    pasoSeleccionado: 2
+    pasoSeleccionado: 1,
+
+    // 
+    // SECCIÓN CATEGORÍA COMPORTAMIENTO CLIENTE
+    // 
+    // Representan los datos enlazados a los calendarios
+    // de la sección de comportamiento cliente
+    // 
+    fechaUltimaActividadR: null,
+    fechaUltimaActividadM: null,
+    fechaUltimaActividadT: null,
+    fechaUltimoMovimientoA: null,
   },
 
   computed: {

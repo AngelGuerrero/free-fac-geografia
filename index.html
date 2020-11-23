@@ -773,9 +773,10 @@
                   sociodemograficas del cliente. Ahora bien, si no lo requieres,
                   pues dar clic en continuar.
                 </p>
-                <div class="card">
+                <!-- Género -->
+                <div class="card my-4">
                   <div class="card-body">
-                    <div class="form-row mt-4">
+                    <div class="form-row">
                       <div class="col-12 col-sm-6">
                         <h5>Genero</h5>
                         <div class="form-check">
@@ -783,9 +784,12 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck1"
+                            id="chkSocioDemograficosGeneroHombre"
                           />
-                          <label class="form-check-label" for="defaultCheck1">
+                          <label
+                            class="form-check-label"
+                            for="chkSocioDemograficosGeneroHombre"
+                          >
                             Hombre
                           </label>
                         </div>
@@ -794,9 +798,12 @@
                             class="form-check-input"
                             type="checkbox"
                             value=""
-                            id="defaultCheck2"
+                            id="chkSocioDemograficosGeneroMujer"
                           />
-                          <label class="form-check-label" for="defaultCheck2">
+                          <label
+                            class="form-check-label"
+                            for="chkSocioDemograficosGeneroMujer"
+                          >
                             Mujer
                           </label>
                         </div>
@@ -806,527 +813,535 @@
                   </div>
                 </div>
 
-                <h3 class="text-center">Edad</h3>
-                <p class="text-center">
-                  Elije el tipo de clasificación de edad del cliente que mas se
-                  adecue a tus necesidades.
-                </p>
-                <div class="accordion" id="accordionExample">
-                  <div class="card">
-                    <div class="card-header" id="headingOnee">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOnee"
-                          aria-expanded="true"
-                          aria-controls="collapseOnee"
-                        >
-                          <h5>Manual</h5>
-                        </button>
-                      </h2>
-                    </div>
+                <!-- Edad -->
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <h3 class="text-center">Edad</h3>
+                    <p class="text-center">
+                      Elije el tipo de clasificación de edad del cliente que mas
+                      se adecue a tus necesidades.
+                    </p>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOnee">
+                          <h2 class="mb-0">
+                            <button
+                              class="btn btn-link btn-block text-left"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseOnee"
+                              aria-expanded="true"
+                              aria-controls="collapseOnee"
+                            >
+                              <h5>Manual</h5>
+                            </button>
+                          </h2>
+                        </div>
 
-                    <div
-                      id="collapseOnee"
-                      class="collapse show"
-                      aria-labelledby="headingOnee"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-12">
+                        <div
+                          id="collapseOnee"
+                          class="collapse show"
+                          aria-labelledby="headingOnee"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-12">
+                                <p class="text-center">
+                                  Elije los minimos y maximos de tu rango de
+                                  edades
+                                </p>
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <input
+                                      type="text"
+                                      name="rangeEdad_1"
+                                      id="rangeEdad_1"
+                                    />
+                                  </div>
+                                </div>
+
+                                <p class="text-center">
+                                  ¿Necesitas un rango más?
+                                </p>
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <input
+                                      type="text"
+                                      name="rangeEdad_2"
+                                      id="rangeEdad_2"
+                                    />
+                                  </div>
+                                </div>
+
+                                <p class="text-center">¿Otro?</p>
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <input
+                                      type="text"
+                                      name="rangeEdad_3"
+                                      id="rangeEdad_3"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <button
+                            class="btn btn-link btn-block text-left collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseTwoo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwoo"
+                          >
+                            <h5>Rangos de edad</h5>
+                          </button>
+                        </div>
+                        <div
+                          id="collapseTwoo"
+                          class="collapse"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
                             <p class="text-center">
-                              Elije los minimos y maximos de tu rango de edades
+                              Selecciona los rangos de tu interes
                             </p>
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <input
-                                  type="text"
-                                  name="rangeEdad_1"
-                                  id="rangeEdad_1"
-                                />
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_1"
+                                  >
+                                    15 a 19 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_2"
+                                  >
+                                    20 a 24 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_3"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_3"
+                                  >
+                                    25 a 29 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_4"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_4"
+                                  >
+                                    30 a 34 años
+                                  </label>
+                                </div>
                               </div>
-                            </div>
-
-                            <p class="text-center">¿Necesitas un rango más?</p>
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <input
-                                  type="text"
-                                  name="rangeEdad_2"
-                                  id="rangeEdad_2"
-                                />
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_5"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_5"
+                                  >
+                                    35 a 39 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_6"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_6"
+                                  >
+                                    40 a 44 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_7"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_7"
+                                  >
+                                    45 a 49 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_8"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_8"
+                                  >
+                                    50 a 54 años
+                                  </label>
+                                </div>
                               </div>
-                            </div>
-
-                            <p class="text-center">¿Otro?</p>
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <input
-                                  type="text"
-                                  name="rangeEdad_3"
-                                  id="rangeEdad_3"
-                                />
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_9"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_9"
+                                  >
+                                    55 a 59 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_10"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_10"
+                                  >
+                                    60 a 64 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_11"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_11"
+                                  >
+                                    65 a 69 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_12"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_12"
+                                  >
+                                    70 a 74 años
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_13"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_13"
+                                  >
+                                    75 a 79 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_14"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_14"
+                                  >
+                                    80 a 84 años
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkRangoEdad_15"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkRangoEdad_15"
+                                  >
+                                    85 años o más
+                                  </label>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <button
-                        class="btn btn-link btn-block text-left collapsed"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwoo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwoo"
-                      >
-                        <h5>Rangos de edad</h5>
-                      </button>
-                    </div>
-                    <div
-                      id="collapseTwoo"
-                      class="collapse"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <p class="text-center">
-                          Selecciona los rangos de tu interes
-                        </p>
-                        <div class="row">
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_1"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_1"
-                              >
-                                15 a 19 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_2"
-                              >
-                                20 a 24 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_3"
-                              >
-                                25 a 29 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_4"
-                              >
-                                30 a 34 años
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_5"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_5"
-                              >
-                                35 a 39 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_6"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_6"
-                              >
-                                40 a 44 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_7"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_7"
-                              >
-                                45 a 49 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_8"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_8"
-                              >
-                                50 a 54 años
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_9"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_9"
-                              >
-                                55 a 59 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_10"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_10"
-                              >
-                                60 a 64 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_11"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_11"
-                              >
-                                65 a 69 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_12"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_12"
-                              >
-                                70 a 74 años
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_13"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_13"
-                              >
-                                75 a 79 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_14"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_14"
-                              >
-                                80 a 84 años
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkRangoEdad_15"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkRangoEdad_15"
-                              >
-                                85 años o más
-                              </label>
-                            </div>
-                          </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThreee">
+                          <h2 class="mb-0">
+                            <button
+                              class="btn btn-link btn-block text-left collapsed"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseThreee"
+                              aria-expanded="false"
+                              aria-controls="collapseThreee"
+                            >
+                              <h5>Etapas de vida</h5>
+                            </button>
+                          </h2>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" id="headingThreee">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseThreee"
-                          aria-expanded="false"
-                          aria-controls="collapseThreee"
+                        <div
+                          id="collapseThreee"
+                          class="collapse"
+                          aria-labelledby="headingThreee"
+                          data-parent="#accordionExample"
                         >
-                          <h5>Etapas de vida</h5>
-                        </button>
-                      </h2>
-                    </div>
-                    <div
-                      id="collapseThreee"
-                      class="collapse"
-                      aria-labelledby="headingThreee"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <p class="text-center">
-                          Selecciona la etapa de vida para tu analisis
-                        </p>
-                        <br />
-                        <div class="row">
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkEtapaIteres_1"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkEtapaIteres_1"
-                              >
-                                Adolecentes
-                              </label>
+                          <div class="card-body">
+                            <p class="text-center">
+                              Selecciona la etapa de vida para tu analisis
+                            </p>
+                            <br />
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkEtapaIteres_1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkEtapaIteres_1"
+                                  >
+                                    Adolecentes
+                                  </label>
+                                </div>
+                                <p>edades entre 15 y 24 años.</p>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkEtapaIteres_2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkEtapaIteres_2"
+                                  >
+                                    Adultos jovenes
+                                  </label>
+                                </div>
+                                <p>edades entre 25 y 39 años.</p>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkEtapaInteres_3"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkEtapaInteres_3"
+                                  >
+                                    Adultos
+                                  </label>
+                                </div>
+                                <p>edades entre 40 y 64 años.</p>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkEtapaInteres_4"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkEtapaInteres_4"
+                                  >
+                                    Jubilados
+                                  </label>
+                                </div>
+                                <p>65 años y más</p>
+                              </div>
                             </div>
-                            <p>edades entre 15 y 24 años.</p>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkEtapaIteres_2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkEtapaIteres_2"
-                              >
-                                Adultos jovenes
-                              </label>
-                            </div>
-                            <p>edades entre 25 y 39 años.</p>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkEtapaInteres_3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkEtapaInteres_3"
-                              >
-                                Adultos
-                              </label>
-                            </div>
-                            <p>edades entre 40 y 64 años.</p>
-                          </div>
-                          <div class="col-sm-3">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkEtapaInteres_4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkEtapaInteres_4"
-                              >
-                                Jubilados
-                              </label>
-                            </div>
-                            <p>65 años y más</p>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" id="headingThree">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-link btn-block text-left collapsed"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseFour"
-                          aria-expanded="false"
-                          aria-controls="collapseFour"
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h2 class="mb-0">
+                            <button
+                              class="btn btn-link btn-block text-left collapsed"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseFour"
+                              aria-expanded="false"
+                              aria-controls="collapseFour"
+                            >
+                              <h5>Generación</h5>
+                            </button>
+                          </h2>
+                        </div>
+                        <div
+                          id="collapseFour"
+                          class="collapse"
+                          aria-labelledby="headingFour"
+                          data-parent="#accordionExample"
                         >
-                          <h5>Generación</h5>
-                        </button>
-                      </h2>
-                    </div>
-                    <div
-                      id="collapseFour"
-                      class="collapse"
-                      aria-labelledby="headingFour"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <p class="text-center">
-                          Elije la generación adecuada a tu campaña
-                        </p>
-                        <br />
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkGeneracion_1"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkGeneracion_1"
-                              >
-                                Generación Z
-                              </label>
-                              <p>
-                                Clientes que nacieron en 1995 hasta el dia de
-                                hoy
-                              </p>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkGeneracion_2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkGeneracion_2"
-                              >
-                                Millennials (Y)
-                              </label>
-                              <p>Clientes que nacieron entre 1982 y 1994</p>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkGeneracion_3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkGeneracion_3"
-                              >
-                                Generación X
-                              </label>
-                              <p>Clientes que nacieron entre 1965 y 1981</p>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkGeneracion_4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkGeneracion_4"
-                              >
-                                Baby Boom
-                              </label>
-                              <p>Clientes que nacieron entre 1945 y 1964</p>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkGeneracion_5"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkGeneracion_5"
-                              >
-                                Generación Silenciosa
-                              </label>
-                              <p>Clientes que nacieron entre 1925 y 1944</p>
+                          <div class="card-body">
+                            <p class="text-center">
+                              Elije la generación adecuada a tu campaña
+                            </p>
+                            <br />
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkGeneracion_1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkGeneracion_1"
+                                  >
+                                    Generación Z
+                                  </label>
+                                  <p>
+                                    Clientes que nacieron en 1995 hasta el dia
+                                    de hoy
+                                  </p>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkGeneracion_2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkGeneracion_2"
+                                  >
+                                    Millennials (Y)
+                                  </label>
+                                  <p>Clientes que nacieron entre 1982 y 1994</p>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkGeneracion_3"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkGeneracion_3"
+                                  >
+                                    Generación X
+                                  </label>
+                                  <p>Clientes que nacieron entre 1965 y 1981</p>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkGeneracion_4"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkGeneracion_4"
+                                  >
+                                    Baby Boom
+                                  </label>
+                                  <p>Clientes que nacieron entre 1945 y 1964</p>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkGeneracion_5"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkGeneracion_5"
+                                  >
+                                    Generación Silenciosa
+                                  </label>
+                                  <p>Clientes que nacieron entre 1925 y 1944</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1338,6 +1353,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="row">
+                      <!-- Nivel de escolaridad -->
                       <div class="col-sm-6">
                         <div class="card">
                           <div class="card-body">
@@ -1445,6 +1461,7 @@
                           </div>
                         </div>
                       </div>
+                      <!-- Estado civil -->
                       <div class="col-sm-6">
                         <div class="card">
                           <div class="card-body">
@@ -1557,6 +1574,7 @@
 
                     <!---->
                     <div class="row">
+                      <!-- Integrantes del hogar -->
                       <div class="col-sm-6">
                         <div class="card">
                           <div class="card-body">
@@ -1664,6 +1682,7 @@
                           </div>
                         </div>
                       </div>
+                      <!-- Integrantes del hogar que trabajan -->
                       <div class="col-sm-6">
                         <div class="card">
                           <div class="card-body">
@@ -1760,348 +1779,347 @@
                         </div>
                       </div>
                     </div>
-
                     <!---->
                   </div>
                 </div>
-                <br />
 
-                <h3 class="text-center">Salario</h3>
-                <p class="text-center">
-                  Elije el ingreso del cliente que mejor considere.
-                </p>
-                <div class="accordion">
-                  <div class="card">
-                    <div class="card-header">
-                      <button
-                        class="btn btn-link btn-block text-left"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseSalarioMinimo"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        Salarios minimos
-
-                        <p>
-                          Salario mínimo general vigente a partir del 1° de
-                          enero de 2020 corresponde a $123.22 pesos
-                        </p>
-                      </button>
-                    </div>
-
-                    <div
-                      id="collapseSalarioMinimo"
-                      class="collapse show"
-                      aria-labelledby="headingOn"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <p class="text-center">
-                          Selecciona los rangos de salario minimo requerido
-                        </p>
-
-                        <p>
-                          <br />
-                        </p>
-
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_1"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_1"
-                              >
-                                Menor o igual a 1 SM
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_2"
-                              >
-                                Hasta 2 SM
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_3"
-                              >
-                                Hasta 3 SM
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_4"
-                              >
-                                Hasta 4 SM
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_5"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_5"
-                              >
-                                De 5 a 10 SM
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_6"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_6"
-                              >
-                                De 11 a 25 SM
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkSalario_7"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkSalario_7"
-                              >
-                                Mayor a 25 SM
-                              </label>
-                            </div>
-                          </div>
+                <!-- Salario -->
+                <div class="row mt-4">
+                  <div class="col-12">
+                    <h3 class="text-center">Salario</h3>
+                    <p class="text-center">
+                      Elije el ingreso del cliente que mejor considere.
+                    </p>
+                    <div class="accordion">
+                      <div class="card">
+                        <div class="card-header">
+                          <button
+                            class="btn btn-link btn-block text-left"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseSalarioMinimo"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                          >
+                            Salarios minimos
+                            <p>
+                              Salario mínimo general vigente a partir del 1° de
+                              enero de 2020 corresponde a $123.22 pesos
+                            </p>
+                          </button>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <button
-                        class="btn btn-link btn-block text-left collapsed"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseIngresoPromedioMensual"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        Ingreso promedio mensual
-                        <p>
-                          Elije los minimos y maximos del ingreso promedio
-                          mensual
-                        </p>
-                      </button>
-                    </div>
-                    <div
-                      id="collapseIngresoPromedioMensual"
-                      class="collapse show"
-                      aria-labelledby="headingTwo"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-12">
-                            <p class="text-center">Salario promedio mensual</p>
 
-                            <div class="form-group row">
-                              <div class="col-12">
-                                <input
-                                  type="text"
-                                  name="rangeSalarioPromedioMensual"
-                                  id="rangeSalarioPromedioMensual"
-                                />
+                        <div
+                          id="collapseSalarioMinimo"
+                          class="collapse show"
+                          aria-labelledby="headingOn"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
+                            <p class="text-center">
+                              Selecciona los rangos de salario minimo requerido
+                            </p>
+
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_1"
+                                  >
+                                    Menor o igual a 1 SM
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_2"
+                                  >
+                                    Hasta 2 SM
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_3"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_3"
+                                  >
+                                    Hasta 3 SM
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_4"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_4"
+                                  >
+                                    Hasta 4 SM
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_5"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_5"
+                                  >
+                                    De 5 a 10 SM
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_6"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_6"
+                                  >
+                                    De 11 a 25 SM
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkSalario_7"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkSalario_7"
+                                  >
+                                    Mayor a 25 SM
+                                  </label>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header">
-                      <button
-                        class="btn btn-link btn-block text-left collapsed"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseNivelSocioEconomico"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        Nivel socioeconómico
-                        <p>
-                          Selecciona el Nivel Socieconomico de tu interes.
-                          *Datos calculados al 2020
-                        </p>
-                      </button>
-                    </div>
-                    <div
-                      id="collapseNivelSocioEconomico"
-                      class="collapse"
-                      aria-labelledby="headingThree"
-                      data-parent="#accordionExample"
-                    >
-                      <div class="card-body">
-                        <p class="text-center">
-                          Selecciona los rangos de nivel socioeconómico de tu
-                          interes
-                        </p>
-                        <br />
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_1"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_1"
-                                title="Ingreso promedio mensual $94,864"
-                              >
-                                A/B
-                                <p>Ingreso promedio mensual $94,864</p>
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_2"
-                                title="Ingreso promedio mensual $39,061"
-                              >
-                                C+
-                                <p>Ingreso promedio mensual $39,061</p>
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_3"
-                                title="Ingreso promedio mensual $22,205"
-                              >
-                                C
-                                <p>Ingreso promedio mensual $22,205</p>
-                              </label>
+                      <div class="card">
+                        <div class="card-header">
+                          <button
+                            class="btn btn-link btn-block text-left collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseIngresoPromedioMensual"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                          >
+                            Ingreso promedio mensual
+                            <p>
+                              Elije los minimos y maximos del ingreso promedio
+                              mensual
+                            </p>
+                          </button>
+                        </div>
+                        <div
+                          id="collapseIngresoPromedioMensual"
+                          class="collapse show"
+                          aria-labelledby="headingTwo"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-12">
+                                <p class="text-center">
+                                  Salario promedio mensual
+                                </p>
+
+                                <div class="form-group row">
+                                  <div class="col-12">
+                                    <input
+                                      type="text"
+                                      name="rangeSalarioPromedioMensual"
+                                      id="rangeSalarioPromedioMensual"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_4"
-                                title="Ingreso promedio mensual $16,740"
-                              >
-                                C-
-                                <p>Ingreso promedio mensual $16,740</p>
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_5"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_5"
-                                title="Ingreso promedio mensual $12,945"
-                              >
-                                D+
-                                <p>Ingreso promedio mensual $12,945</p>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_6"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_6"
-                                title="Ingreso promedio mensual $7,833"
-                              >
-                                D
-                                <p>Ingreso promedio mensual $7,833</p>
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="chkNivelSocioEconomico_7"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="chkNivelSocioEconomico_7"
-                                title="Ingreso promedio mensual $3,712"
-                              >
-                                E
-                                <p>Ingreso promedio mensual $3,712</p>
-                              </label>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <button
+                            class="btn btn-link btn-block text-left collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseNivelSocioEconomico"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >
+                            Nivel socioeconómico
+                            <p>
+                              Selecciona el Nivel Socieconomico de tu interes.
+                              *Datos calculados al 2020
+                            </p>
+                          </button>
+                        </div>
+                        <div
+                          id="collapseNivelSocioEconomico"
+                          class="collapse"
+                          aria-labelledby="headingThree"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
+                            <p class="text-center mb-5">
+                              Selecciona los rangos de nivel socioeconómico de
+                              tu interes
+                            </p>
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_1"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_1"
+                                    title="Ingreso promedio mensual $94,864"
+                                  >
+                                    A/B
+                                    <p>Ingreso promedio mensual $94,864</p>
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_2"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_2"
+                                    title="Ingreso promedio mensual $39,061"
+                                  >
+                                    C+
+                                    <p>Ingreso promedio mensual $39,061</p>
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_3"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_3"
+                                    title="Ingreso promedio mensual $22,205"
+                                  >
+                                    C
+                                    <p>Ingreso promedio mensual $22,205</p>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_4"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_4"
+                                    title="Ingreso promedio mensual $16,740"
+                                  >
+                                    C-
+                                    <p>Ingreso promedio mensual $16,740</p>
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_5"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_5"
+                                    title="Ingreso promedio mensual $12,945"
+                                  >
+                                    D+
+                                    <p>Ingreso promedio mensual $12,945</p>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_6"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_6"
+                                    title="Ingreso promedio mensual $7,833"
+                                  >
+                                    D
+                                    <p>Ingreso promedio mensual $7,833</p>
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="chkNivelSocioEconomico_7"
+                                  />
+                                  <label
+                                    class="form-check-label"
+                                    for="chkNivelSocioEconomico_7"
+                                    title="Ingreso promedio mensual $3,712"
+                                  >
+                                    E
+                                    <p>Ingreso promedio mensual $3,712</p>
+                                  </label>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2439,14 +2457,9 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad e R</h5>
-                            <div class="card-text">
-                              <input
-                                type="text"
-                                id="calendari"
-                                name=""
-                                readonly=""
-                              />
+                            <h5 class="mb-3">Fecha de ultima actividad e R</h5>
+                            <div class="flex justify-center">
+                              <v-date-picker v-model="fechaUltimaActividadR" />
                             </div>
                           </div>
                         </div>
@@ -2454,14 +2467,9 @@
                       <div class="col-12 col-lg-4 mb-3">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad e M</h5>
-                            <div class="card-text">
-                              <input
-                                type="text"
-                                id="calendari"
-                                name=""
-                                readonly=""
-                              />
+                            <h5 class="mb-3">Fecha de ultima actividad e M</h5>
+                            <div class="flex justify-center">
+                              <v-date-picker v-model="fechaUltimaActividadM" />
                             </div>
                           </div>
                         </div>
@@ -2469,14 +2477,9 @@
                       <div class="col-12 col-lg-4">
                         <div class="card">
                           <div class="card-body">
-                            <h5>Fecha de ultima actividad e T</h5>
-                            <div class="card-text">
-                              <input
-                                type="text"
-                                id="calendari"
-                                name=""
-                                readonly=""
-                              />
+                            <h5 class="mb-3">Fecha de ultima actividad e T</h5>
+                            <div class="flex justify-center">
+                              <v-date-picker v-model="fechaUltimaActividadT" />
                             </div>
                           </div>
                         </div>
@@ -2597,13 +2600,12 @@
                             <div class="col-12 col-lg-6 mb-3">
                               <div class="card">
                                 <div class="card-body">
-                                  <h5>Fecha del ultimo movimiento de A</h5>
-                                  <div class="card-text">
-                                    <input
-                                      type="text"
-                                      id="calendario"
-                                      name=""
-                                      readonly=""
+                                  <h5 class="mb-3">
+                                    Fecha del ultimo movimiento de A
+                                  </h5>
+                                  <div class="flex justify-center">
+                                    <v-date-picker
+                                      v-model="fechaUltimoMovimientoA"
                                     />
                                   </div>
                                 </div>
@@ -3470,7 +3472,9 @@
 
     <!-- Vue -->
     <!-- version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Link VCalendar Javascript (Plugin automatically installed) -->
+    <script src="https://unpkg.com/v-calendar"></script>
     <!-- production version, optimized for size and speed -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
 
